@@ -1,0 +1,94 @@
+Writing training job pid to /opt/ml/training_worker.pid: 59
+Training Worker Args: Namespace(aws_region='us-east-1', checkpoint_dir='./checkpoint_sagemaker', environment_s3_key=None, framework='tensorflow', model_metadata_s3_key='s3://aws-deepracer-data-us-east-1-1/data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/model_metadata.json', preset_s3_key=None, pretrained_checkpoint_dir='./pretrained_checkpoint_sagemaker', pretrained_s3_bucket='aws-deepracer-data-us-east-1-1', pretrained_s3_prefix='data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/b673d4bf-ef1b-4008-ad34-ed597e4f376f/sagemaker-robomaker-artifacts', s3_bucket='aws-deepracer-data-us-east-1-1', s3_prefix='data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts')
+[s3] Successfully downloaded model metadata                  from s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/model_metadata.json to local ./custom_files/agent/model_metadata.json.
+Sensor list ['FRONT_FACING_CAMERA'], network DEEP_CONVOLUTIONAL_NETWORK_SHALLOW, simapp_version 4.0, training_algorithm clipped_ppo, action_space_type discrete lidar_config {'num_sectors': 8, 'num_values_per_sector': 8, 'clipping_dist': 2.0}
+Action space from file: [{'steering_angle': -20, 'speed': 0.5, 'index': 0}, {'steering_angle': -13.3, 'speed': 0.8, 'index': 1}, {'steering_angle': -13.3, 'speed': 1.3, 'index': 2}, {'steering_angle': -6.7, 'speed': 1, 'index': 3}, {'steering_angle': -6.7, 'speed': 1.7, 'index': 4}, {'steering_angle': -6.7, 'speed': 2.5, 'index': 5}, {'steering_angle': 0, 'speed': 4, 'index': 6}, {'steering_angle': 6.7, 'speed': 1, 'index': 7}, {'steering_angle': 6.7, 'speed': 1.7, 'index': 8}, {'steering_angle': 6.7, 'speed': 2.5, 'index': 9}, {'steering_angle': 13.3, 'speed': 0.8, 'index': 10}, {'steering_angle': 13.3, 'speed': 1.3, 'index': 11}, {'steering_angle': 20, 'speed': 0.5, 'index': 12}, {'steering_angle': -30, 'speed': 0.3, 'index': 13}, {'steering_angle': 30, 'speed': 0.3, 'index': 14}, {'steering_angle': 0, 'speed': 2, 'index': 15}]
+Using the following hyper-parameters
+{
+  "batch_size": 64,
+  "beta_entropy": 0.01,
+  "discount_factor": 0.999,
+  "e_greedy_value": 1.0,
+  "epsilon_steps": 10000,
+  "exploration_type": "categorical",
+  "loss_type": "huber",
+  "lr": 0.0003,
+  "num_episodes_between_training": 20,
+  "num_epochs": 10,
+  "stack_size": 1,
+  "term_cond_avg_score": 100000.0,
+  "term_cond_max_episodes": 100000
+}
+[s3] Successfully uploaded hyperparameters to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/ip/hyperparameters.json.
+Hostname: ip-10-0-181-55.ec2.internal
+[s3] Successfully uploaded ip address to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/ip/ip.json.
+[s3] Successfully uploaded ip done to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/ip/done.
+[s3] Successfully downloaded deepracer checkpoint json from                  s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/b673d4bf-ef1b-4008-ad34-ed597e4f376f/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json to local pretrained_checkpoint_sagemaker/agent/deepracer_checkpoints.json.
+[s3] Successfully uploaded temp coach checkpoint to                   s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/b673d4bf-ef1b-4008-ad34-ed597e4f376f/sagemaker-robomaker-artifacts/model/.coach_checkpoint.
+[s3] Successfully downloaded 2_Step-1460.ckpt.data-00000-of-00001 from                  s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/b673d4bf-ef1b-4008-ad34-ed597e4f376f/sagemaker-robomaker-artifacts/model/2_Step-1460.ckpt.data-00000-of-00001 to local pretrained_checkpoint_sagemaker/agent/2_Step-1460.ckpt.data-00000-of-00001.
+[s3] Successfully downloaded 2_Step-1460.ckpt.index from                  s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/b673d4bf-ef1b-4008-ad34-ed597e4f376f/sagemaker-robomaker-artifacts/model/2_Step-1460.ckpt.index to local pretrained_checkpoint_sagemaker/agent/2_Step-1460.ckpt.index.
+[s3] Successfully downloaded 2_Step-1460.ckpt.meta from                  s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/b673d4bf-ef1b-4008-ad34-ed597e4f376f/sagemaker-robomaker-artifacts/model/2_Step-1460.ckpt.meta to local pretrained_checkpoint_sagemaker/agent/2_Step-1460.ckpt.meta.
+[s3] Successfully downloaded .ready from                  s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/b673d4bf-ef1b-4008-ad34-ed597e4f376f/sagemaker-robomaker-artifacts/model/.ready to local pretrained_checkpoint_sagemaker/agent/.ready.
+## Creating graph - name: MultiAgentGraphManager
+## Start physics before creating graph
+## Create graph
+## Creating agent - name: agent
+[RL] Created agent loggers
+[RL] Dynamic import of memory:  "DeepRacerMemoryParameters" {
+    "load_memory_from_file_path": null,
+    "max_size": [
+        "<MemoryGranularity.Transitions: 0>",
+        1000000
+    ],
+    "n_step": -1,
+    "shared_memory": false,
+    "train_to_eval_ratio": 1
+}
+[RL] Dynamically imported of memory <markov.memories.deepracer_memory.DeepRacerMemory object at 0x7fb88984a9e8>
+[RL] Setting devices
+[RL] Setting filters
+[RL] Setting filter devices: numpy
+[RL] Setting Phase
+[RL] After setting Phase
+[RL] Setting signals
+[RL] Agent init successful
+[RL] ActorCriticAgent init
+[RL] ActorCriticAgent  init successful
+## Created agent: agent
+## Stop physics after creating graph
+## Creating session
+2022-05-10 07:09:26.177530: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+Checkpoint> Restoring from path=./pretrained_checkpoint_sagemaker/agent/2_Step-1460.ckpt
+INFO:tensorflow:./checkpoint_sagemaker/agent/3_Step-0.ckpt is not in all_model_checkpoint_paths. Manually adding it.
+Checkpoint> Saving in path=['./checkpoint_sagemaker/agent/3_Step-0.ckpt']
+[s3] Successfully uploaded .lock to                      s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/model/.lock.
+Uploaded 3 files for checkpoint 3
+[s3] Successfully uploaded coach checkpoint to                   s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/model/.coach_checkpoint.
+Unable to find deepracer checkpoint json
+Unable to find the best deepracer checkpoint number. Getting the last checkpoint number
+Unable to find deepracer checkpoint json
+Unable to find the last deepracer checkpoint number.
+Unable to find deepracer checkpoint json
+Unable to find the last deepracer checkpoint number.
+INFO:tensorflow:Froze 11 variables.
+INFO:tensorflow:Converted 11 variables to const ops.
+saved intermediate frozen graph: data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/model/model_3.pb
+Best checkpoint number: -1, Last checkpoint number: -1
+Copying the frozen checkpoint from ./frozen_models/agent/model_3.pb to /opt/ml/model/agent/model.pb.
+Unable to find deepracer checkpoint json
+[s3] Successfully uploaded .lock to                      s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/model/.lock.
+[s3] Successfully uploaded .ready to                      s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/model/.ready.
+DoorMan: installing SIGINT, SIGTERM
+Training> Name=main_level/agent, Worker=0, Episode=1, Total reward=0, Steps=31, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=2, Total reward=0, Steps=56, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=3, Total reward=0, Steps=88, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=4, Total reward=0, Steps=143, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=5, Total reward=0, Steps=175, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=6, Total reward=0, Steps=201, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=7, Total reward=0, Steps=221, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=8, Total reward=0, Steps=253, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=9, Total reward=0, Steps=271, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=10, Total reward=0, Steps=308, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=11, Total reward=0, Steps=332, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=12, Total reward=0, Steps=376, Training iteration=0
+Training> Name=main_level/agent, Worker=0, Episode=13, Total reward=0, Steps=400, Training iteration=0

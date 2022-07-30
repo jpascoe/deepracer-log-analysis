@@ -1,0 +1,782 @@
+... logging to /root/.ros/log/189369d8-d030-11ec-80da-9aae3cb11587/roslaunch-ip-10-0-181-55.ec2.internal-138.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/opt/amazon/install/deepracer_simulation_environment/share/deepracer_simulation_environment/launch/distributed_training.launch
+[1mstarted roslaunch server http://10.0.181.55:36279/[0m
+SUMMARY
+========
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.13
+NODES
+  /
+    download_params_and_roslaunch_agent_node (deepracer_simulation_environment/download_params_and_roslaunch_agent.py)
+auto-starting new master
+[1mprocess[master]: started with pid [207][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/opt/amazon/install/deepracer_simulation_environment/share/deepracer_simulation_environment/launch/distributed_training.launch http://localhost:11311
+[1msetting /run_id to 189369d8-d030-11ec-80da-9aae3cb11587[0m
+[1mprocess[rosout-1]: started with pid [220][0m
+started core service [/rosout]
+[1mprocess[download_params_and_roslaunch_agent_node-2]: started with pid [223][0m
+Writing sim job pid ['138', '207', '223', '223'] to /opt/ml/simapp-job.pid
+[s3] Successfully downloaded yaml file from s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/training_params_0710c959-4247-4838-ae34-6bb119bc263b.yaml to local ./custom_files/training_params_0710c959-4247-4838-ae34-6bb119bc263b.yaml.
+{'METRICS_S3_BUCKET': ['aws-deepracer-data-us-east-1-1'], 'METRICS_S3_OBJECT_KEY': ['data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json'], 'SIMTRACE_S3_PREFIX': 'data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sim-trace/training', 'SAGEMAKER_SHARED_S3_BUCKET': ['aws-deepracer-data-us-east-1-1'], 'JOB_TYPE': 'TRAINING', 'METRIC_NAMESPACE': 'AWSDeepRacer', 'TARGET_REWARD_SCORE': 'None', 'RACE_TYPE': 'TIME_TRIAL', 'WORLD_NAME': '2022_summit_speedway', 'MP4_S3_OBJECT_PREFIX': 'data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/videos/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A', 'TRAINING_JOB_ARN': 'arn:aws:deepracer:us-east-1:254572619934:training_job/0YjmNcuVQQWtloTSuYs73A', 'ALTERNATE_DRIVING_DIRECTION': 'false', 'MODEL_METADATA_FILE_S3_KEY': ['data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/model_metadata.json'], 'REWARD_FILE_S3_KEY': 'data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/reward_function.py', 'METRIC_NAME': 'TrainingRewardScore', 'AWS_REGION': 'us-east-1', 'S3_KMS_CMK_ARN': 'arn:aws:kms:us-east-1:372026249783:key/b6ea5176-8878-49b3-8c94-f1a4457de4e5', 'MP4_S3_BUCKET': 'aws-deepracer-data-us-east-1-1', 'KINESIS_VIDEO_STREAM_NAME': 'dr-kvs-372026249783-20220510070335-f95894a9-1c70-41d4-870e-12c17b41a30d', 'CAR_NAME': 'Sparky', 'SIMTRACE_S3_BUCKET': 'aws-deepracer-data-us-east-1-1', 'BODY_SHELL_TYPE': ['f1_kart'], 'CHANGE_START_POSITION': 'true', 'SAGEMAKER_SHARED_S3_PREFIX': ['data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts'], 'ROBOMAKER_SIMULATION_JOB_ACCOUNT_ID': '372026249783', 'CAR_COLOR': ['Black'], 'NUMBER_OF_EPISODES': '0'}
+[s3] Successfully downloaded model metadata                  from s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/model_metadata.json to local ./custom_files/racecar/model_metadata.json.
+Sensor list [u'FRONT_FACING_CAMERA'], network DEEP_CONVOLUTIONAL_NETWORK_SHALLOW, simapp_version 4.0, training_algorithm clipped_ppo, action_space_type discrete lidar_config {'num_values_per_sector': 8, 'clipping_dist': 2.0, 'num_sectors': 8}
+... logging to /root/.ros/log/189369d8-d030-11ec-80da-9aae3cb11587/roslaunch-ip-10-0-181-55.ec2.internal-257.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/opt/amazon/install/deepracer_simulation_environment/share/deepracer_simulation_environment/launch/rollout_rl_agent.launch
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+[1mstarted roslaunch server http://10.0.181.55:33089/[0m
+SUMMARY
+========
+PARAMETERS
+ * /ALTERNATE_DRIVING_DIRECTION: false
+ * /AWS_REGION: us-east-1
+ * /BODY_SHELL_TYPE: f1_kart
+ * /CAR_NAME: Sparky
+ * /CHANGE_START_POSITION: true
+ * /JOB_TYPE: TRAINING
+ * /KINESIS_VIDEO_STREAM_NAME: dr-kvs-3720262497...
+ * /METRICS_S3_BUCKET: aws-deepracer-dat...
+ * /METRICS_S3_OBJECT_KEY: data-1bc58067-cee...
+ * /METRIC_NAME: TrainingRewardScore
+ * /METRIC_NAMESPACE: AWSDeepRacer
+ * /MODEL_METADATA_FILE_S3_KEY: data-1bc58067-cee...
+ * /MP4_S3_BUCKET: aws-deepracer-dat...
+ * /MP4_S3_OBJECT_PREFIX: data-1bc58067-cee...
+ * /NUMBER_OF_EPISODES: 0
+ * /RACE_TYPE: TIME_TRIAL
+ * /REWARD_FILE_S3_KEY: data-1bc58067-cee...
+ * /ROBOMAKER_SIMULATION_JOB_ACCOUNT_ID: 372026249783
+ * /S3_KMS_CMK_ARN: arn:aws:kms:us-ea...
+ * /SAGEMAKER_SHARED_S3_BUCKET: aws-deepracer-dat...
+ * /SAGEMAKER_SHARED_S3_PREFIX: data-1bc58067-cee...
+ * /SIMTRACE_S3_BUCKET: aws-deepracer-dat...
+ * /SIMTRACE_S3_PREFIX: data-1bc58067-cee...
+ * /TARGET_REWARD_SCORE: None
+ * /TRAINING_JOB_ARN: arn:aws:deepracer...
+ * /WORLD_NAME: 2022_summit_speedway
+ * /racecar/h264_video_encoder/bitrate: 2048000
+ * /racecar/h264_video_encoder/fps_denominator: 1
+ * /racecar/h264_video_encoder/fps_numerator: 15
+ * /racecar/h264_video_encoder/image_transport: raw
+ * /racecar/h264_video_encoder/publication_topic: /racecar/b9/kvs/v...
+ * /racecar/h264_video_encoder/subscription_topic: /racecar/deeprace...
+ * /racecar/joint_state_controller/publish_rate: 60
+ * /racecar/joint_state_controller/type: joint_state_contr...
+ * /racecar/kinesis_video_streamer/aws_client_configuration/connect_timeout_ms: 9000
+ * /racecar/kinesis_video_streamer/aws_client_configuration/max_retries: 10
+ * /racecar/kinesis_video_streamer/aws_client_configuration/region: us-east-1
+ * /racecar/kinesis_video_streamer/aws_client_configuration/request_timeout_ms: 9000
+ * /racecar/kinesis_video_streamer/kinesis_video/log4cplus_config: /opt/amazon/insta...
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/frame_rate: 30
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/frame_timecodes: False
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/key_frame_fragmentation: False
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/stream_name: dr-kvs-3720262497...
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/subscription_topic: /racecar/b9/kvs/v...
+ * /racecar/kinesis_video_streamer/kinesis_video/stream0/topic_type: 1
+ * /racecar/kinesis_video_streamer/kinesis_video/stream_count: 1
+ * /racecar/left_front_wheel_velocity_controller/joint: left_front_wheel_...
+ * /racecar/left_front_wheel_velocity_controller/pid/d: 0.0
+ * /racecar/left_front_wheel_velocity_controller/pid/i: 0.0
+ * /racecar/left_front_wheel_velocity_controller/pid/i_clamp: 0.0
+ * /racecar/left_front_wheel_velocity_controller/pid/p: 0.5
+ * /racecar/left_front_wheel_velocity_controller/type: effort_controller...
+ * /racecar/left_rear_wheel_velocity_controller/joint: left_rear_wheel_j...
+ * /racecar/left_rear_wheel_velocity_controller/pid/d: 0.0
+ * /racecar/left_rear_wheel_velocity_controller/pid/i: 0.0
+ * /racecar/left_rear_wheel_velocity_controller/pid/i_clamp: 0.0
+ * /racecar/left_rear_wheel_velocity_controller/pid/p: 1.0
+ * /racecar/left_rear_wheel_velocity_controller/type: effort_controller...
+ * /racecar/left_steering_hinge_position_controller/joint: left_steering_hin...
+ * /racecar/left_steering_hinge_position_controller/pid/d: 0.5
+ * /racecar/left_steering_hinge_position_controller/pid/i: 0.0
+ * /racecar/left_steering_hinge_position_controller/pid/p: 1.0
+ * /racecar/left_steering_hinge_position_controller/type: effort_controller...
+ * /racecar/right_front_wheel_velocity_controller/joint: right_front_wheel...
+ * /racecar/right_front_wheel_velocity_controller/pid/d: 0.0
+ * /racecar/right_front_wheel_velocity_controller/pid/i: 0.0
+ * /racecar/right_front_wheel_velocity_controller/pid/i_clamp: 0.0
+ * /racecar/right_front_wheel_velocity_controller/pid/p: 0.5
+ * /racecar/right_front_wheel_velocity_controller/type: effort_controller...
+ * /racecar/right_rear_wheel_velocity_controller/joint: right_rear_wheel_...
+ * /racecar/right_rear_wheel_velocity_controller/pid/d: 0.0
+ * /racecar/right_rear_wheel_velocity_controller/pid/i: 0.0
+ * /racecar/right_rear_wheel_velocity_controller/pid/i_clamp: 0.0
+ * /racecar/right_rear_wheel_velocity_controller/pid/p: 1.0
+ * /racecar/right_rear_wheel_velocity_controller/type: effort_controller...
+ * /racecar/right_steering_hinge_position_controller/joint: right_steering_hi...
+ * /racecar/right_steering_hinge_position_controller/pid/d: 0.5
+ * /racecar/right_steering_hinge_position_controller/pid/i: 0.0
+ * /racecar/right_steering_hinge_position_controller/pid/p: 1.0
+ * /racecar/right_steering_hinge_position_controller/type: effort_controller...
+ * /racecar/robot_description: <?xml version="1....
+ * /rosdistro: melodic
+ * /rosversion: 1.14.13
+ * /use_sim_time: True
+NODES
+  /
+    agent (deepracer_simulation_environment/run_rollout_rl_agent.sh)
+    agents_video_editor (deepracer_simulation_environment/agents_video_editor.py)
+    car_reset_node (deepracer_simulation_environment/car_node.py)
+    gazebo (gazebo_ros/gzserver)
+  /racecar/
+    controller_manager (controller_manager/spawner)
+    h264_video_encoder (h264_video_encoder/h264_video_encoder)
+    kinesis_video_streamer (kinesis_video_streamer/kinesis_video_streamer)
+    racecar_spawn (gazebo_ros/spawn_model)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/opt/amazon/install/deepracer_simulation_environment/share/deepracer_simulation_environment/launch/rollout_rl_agent.launch http://localhost:11311
+[1mprocess[racecar/racecar_spawn-1]: started with pid [279][0m
+[1mprocess[racecar/controller_manager-2]: started with pid [280][0m
+[1mprocess[racecar/robot_state_publisher-3]: started with pid [281][0m
+[1mprocess[racecar/h264_video_encoder-4]: started with pid [282][0m
+[1mprocess[racecar/kinesis_video_streamer-5]: started with pid [283][0m
+[1mprocess[gazebo-6]: started with pid [320][0m
+[33m[ WARN] [1652166555.736639685]: [ClientConfiguration] Retry Strategy will use the default max attempts.[0m
+[33m[ WARN] [1652166555.736737326]: [ClientConfiguration] Retry Strategy will use the default max attempts.[0m
+[1mprocess[car_reset_node-7]: started with pid [325][0m
+[33m[ WARN] [1652166555.773474871]: [STSAssumeRoleWithWebIdentityCredentialsProvider] Token file must be specified to use STS AssumeRole web identity creds provider.[0m
+[33m[ WARN] [1652166555.773508976]: [ClientConfiguration] Retry Strategy will use the default max attempts.[0m
+[31m[ERROR] [1652166555.773644169]: [ProcessCredentialsProvider] Failed to find credential process's profile: default[0m
+[33m[ WARN] [1652166555.775213028]: [STSAssumeRoleWithWebIdentityCredentialsProvider] Token file must be specified to use STS AssumeRole web identity creds provider.[0m
+[33m[ WARN] [1652166555.775241051]: [ClientConfiguration] Retry Strategy will use the default max attempts.[0m
+[31m[ERROR] [1652166555.775578362]: [ProcessCredentialsProvider] Failed to find credential process's profile: default[0m
+[1mprocess[agents_video_editor-8]: started with pid [411][0m
+[1mprocess[agent-9]: started with pid [519][0m
++ export PYTHONUNBUFFERED=1
++ PYTHONUNBUFFERED=1
++ ROLLOUT_IDX=0
++ python3 -m markov.rollout_worker --rollout_idx 0
+[INFO] [1652166555.873158, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[31m[ERROR] [1652166555.901403634]: [ProcessCredentialsProvider] Failed to find credential process's profile: default[0m
+[INFO] [1652166556.550433, 0.000000]: Loading model XML from ros parameter /racecar/robot_description
+[INFO] [1652166556.558913, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
+Publishing to KVS stream is enabled: True
+[INFO] [1652166557.164787, 0.000000]: Calling service /gazebo/spawn_urdf_model
+[INFO] [1652166557.261236, 0.014000]: Spawn status: SpawnModel: Successfully spawned entity
+[CameraManager]: Added <markov.cameras.handlers.follow_car_camera.FollowCarCamera object at 0x7fa21a7a9810> to camera_namespaces racecar
+[CameraManager]: Added <markov.cameras.handlers.top_camera.TopCamera object at 0x7fa21a7a95d0> to camera_namespaces racecar
+[CameraManager]: Removed <markov.cameras.handlers.follow_car_camera.FollowCarCamera object at 0x7fa21a7a9810> from camera_namespaces racecar
+[CameraManager]: Removed <markov.cameras.handlers.top_camera.TopCamera object at 0x7fa21a7a95d0> from camera_namespaces racecar
+[1m[racecar/racecar_spawn-1] process has finished cleanly
+log file: /root/.ros/log/189369d8-d030-11ec-80da-9aae3cb11587/racecar-racecar_spawn-1*.log[0m
+[INFO] [1652166558.290153, 0.246000]: Controller Spawner: Waiting for service controller_manager/switch_controller
+[INFO] [1652166558.292588, 0.248000]: Controller Spawner: Waiting for service controller_manager/unload_controller
+[INFO] [1652166558.295445, 0.251000]: Loading controller: left_rear_wheel_velocity_controller
+[INFO] [1652166558.354735, 0.310000]: Loading controller: right_rear_wheel_velocity_controller
+[INFO] [1652166558.401658, 0.357000]: Loading controller: left_front_wheel_velocity_controller
+[INFO] [1652166558.450765, 0.406000]: Loading controller: right_front_wheel_velocity_controller
+[INFO] [1652166558.496743, 0.452000]: Loading controller: left_steering_hinge_position_controller
+[INFO] [1652166558.546883, 0.502000]: Loading controller: right_steering_hinge_position_controller
+[INFO] [1652166558.595128, 0.550000]: Loading controller: joint_state_controller
+[INFO] [1652166558.605981, 0.561000]: Controller Spawner: Loaded controllers: left_rear_wheel_velocity_controller, right_rear_wheel_velocity_controller, left_front_wheel_velocity_controller, right_front_wheel_velocity_controller, left_steering_hinge_position_controller, right_steering_hinge_position_controller, joint_state_controller
+[INFO] [1652166558.610002, 0.565000]: Started controllers: left_rear_wheel_velocity_controller, right_rear_wheel_velocity_controller, left_front_wheel_velocity_controller, right_front_wheel_velocity_controller, left_steering_hinge_position_controller, right_steering_hinge_position_controller, joint_state_controller
+/usr/lib/python3/dist-packages/requests/__init__.py:80: RequestsDependencyWarning: urllib3 (1.26.9) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+S3 bucket: aws-deepracer-data-us-east-1-1
+S3 prefix: data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts
+[s3] Successfully downloaded reward function from s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/reward_function.py to local                  ./custom_files/agent/customer_reward_function.py.
+Succeed to import user's reward function
+[CameraManager]: Added <markov.cameras.handlers.follow_car_camera.FollowCarCamera object at 0x7fcf2691a080> to camera_namespaces racecar
+[CameraManager]: Added <markov.cameras.handlers.top_camera.TopCamera object at 0x7fcf42049320> to camera_namespaces racecar
+Pausing physics after initializing the cars
+[0m[ INFO] [1652166556.459086335]: DeepRacerGazeboSystemPlugin: Load[0m
+[0m[ INFO] [1652166556.461539854]: DeepRacerGazeboSystemPlugin: Finished loading.[0m
+[0m[ INFO] [1652166556.474286269]: Finished loading Gazebo ROS API Plugin.[0m
+[0m[ INFO] [1652166556.475857054]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+[0m[ INFO] [1652166557.118042126]: DeepRacerGazeboSystemPlugin: Init Complete[0m
+[0m[ INFO] [1652166557.136997322]: waitForService: Service [/gazebo/set_physics_properties] is now available.[0m
+[0m[ INFO] [1652166557.273027276, 0.014000000]: Physics dynamic reconfigure ready.[0m
+[0m[ INFO] [1652166557.809376936, 0.014000000]: Camera Plugin: Using the 'robotNamespace' param: '/racecar/'[0m
+[0m[ INFO] [1652166557.812046743, 0.014000000]: Camera Plugin (ns = /racecar/)  <tf_prefix_>, set to "/racecar"[0m
+[0m[ INFO] [1652166557.920322420, 0.014000000]: Loading gazebo_ros_control plugin[0m
+[0m[ INFO] [1652166557.920424501, 0.014000000]: Starting gazebo_ros_control plugin in namespace: /racecar[0m
+[0m[ INFO] [1652166557.921171742, 0.014000000]: gazebo_ros_control plugin is waiting for model URDF in parameter [/racecar/robot_description] on the ROS param server.[0m
+[0m[ INFO] [1652166558.053420678, 0.014000000]: Loaded gazebo_ros_control.[0m
+Topic [2022_summit_speedway//racecar/main_camera/camera_link/camera_sensor/image] is not valid.
+Spawning sub camera model
+[s3] Successfully downloaded model metadata                  from s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/model_metadata.json to local ./custom_files/agent/model_metadata.json.
+Sensor list ['FRONT_FACING_CAMERA'], network DEEP_CONVOLUTIONAL_NETWORK_SHALLOW, simapp_version 4.0, training_algorithm clipped_ppo, action_space_type discrete lidar_config {'num_sectors': 8, 'num_values_per_sector': 8, 'clipping_dist': 2.0}
+Action space from file: [{'steering_angle': -20, 'speed': 0.5, 'index': 0}, {'steering_angle': -13.3, 'speed': 0.8, 'index': 1}, {'steering_angle': -13.3, 'speed': 1.3, 'index': 2}, {'steering_angle': -6.7, 'speed': 1, 'index': 3}, {'steering_angle': -6.7, 'speed': 1.7, 'index': 4}, {'steering_angle': -6.7, 'speed': 2.5, 'index': 5}, {'steering_angle': 0, 'speed': 4, 'index': 6}, {'steering_angle': 6.7, 'speed': 1, 'index': 7}, {'steering_angle': 6.7, 'speed': 1.7, 'index': 8}, {'steering_angle': 6.7, 'speed': 2.5, 'index': 9}, {'steering_angle': 13.3, 'speed': 0.8, 'index': 10}, {'steering_angle': 13.3, 'speed': 1.3, 'index': 11}, {'steering_angle': 20, 'speed': 0.5, 'index': 12}, {'steering_angle': -30, 'speed': 0.3, 'index': 13}, {'steering_angle': 30, 'speed': 0.3, 'index': 14}, {'steering_angle': 0, 'speed': 2, 'index': 15}]
+[0m[ INFO] [1652166560.483964349, 2.341000000]: Camera Plugin: Using the 'robotNamespace' param: '/racecar/main_camera'[0m
+[0m[ INFO] [1652166560.486106421, 2.341000000]: Camera Plugin (ns = /racecar/main_camera)  <tf_prefix_>, set to "/racecar/main_camera"[0m
+[1;33mWarning [parser.cc:950][0m XML Element[projection_type], child of element[camera] not defined in SDF. Ignoring[projection_type]. You may have an incorrect SDF file, or an sdformat version that doesn't support this element.
+Topic [2022_summit_speedway//sub_camera/camera_link/camera_sensor/image] is not valid.
+[s3] Successfully downloaded ip config from                  s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/ip/ip.json to local ./custom_files/ip.json.
+[s3] Successfully downloaded hyperparameters from                      s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/ip/hyperparameters.json to local ./custom_files/agent/hyperparameters.json.
+Using the following hyper-parameters
+{
+  "batch_size": 64,
+  "beta_entropy": 0.01,
+  "discount_factor": 0.999,
+  "e_greedy_value": 1.0,
+  "epsilon_steps": 10000,
+  "exploration_type": "categorical",
+  "loss_type": "huber",
+  "lr": 0.0003,
+  "num_episodes_between_training": 20,
+  "num_epochs": 10,
+  "stack_size": 1,
+  "term_cond_avg_score": 100000.0,
+  "term_cond_max_episodes": 100000
+}
+s3 failed, retry after 1.088569398515208 seconds. Re-try count: 1/5: An error occurred (404) when calling the HeadObject operation: Not Found
+[h264_omx @ 0x55a5339da180] libOMX_Core.so not found
+[h264_omx @ 0x55a5339da180] libOmxCore.so not found
+[31m[ERROR] [1652166561.603137113, 2.341000000]: [open_codec] Could not open codec[0m
+[libx264 @ 0x55a5339db700] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x55a5339db700] profile High, level 2.2
+[libx264 @ 0x55a5339db700] 264 - core 152 r2854 e9a5903 - H.264/MPEG-4 AVC codec - Copyleft 2003-2017 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=7 lookahead_threads=7 sliced_threads=1 slices=7 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=1 keyint=15 keyint_min=8 scenecut=40 intra_refresh=0 rc=abr mbtree=0 bitrate=2048 ratetol=1.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[31m[ERROR] [1652166561.960535446, 2.341000000]: [ProcessCredentialsProvider] Failed to find credential process's profile: default[0m
+[33m[ WARN] [1652166561.971504917, 2.341000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220510070335-f95894a9-1c70-41d4-870e-12c17b41a30d PutFrame failed. Error code: 4102[0m
+[33m[ WARN] [1652166561.971587719, 2.341000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220510070335-f95894a9-1c70-41d4-870e-12c17b41a30d PutFrame failed. Error code: 4102[0m
+[33m[ WARN] [1652166561.971749349, 2.341000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220510070335-f95894a9-1c70-41d4-870e-12c17b41a30d PutFrame failed. Error code: 4102[0m
+[33m[ WARN] [1652166561.972021083, 2.341000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220510070335-f95894a9-1c70-41d4-870e-12c17b41a30d PutFrame failed. Error code: 4102[0m
+[33m[ WARN] [1652166561.972108087, 2.341000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220510070335-f95894a9-1c70-41d4-870e-12c17b41a30d PutFrame failed. Error code: 4102[0m
+[33m[ WARN] [1652166561.991070063, 2.341000000]: [KinesisVideoFrameTransportCallback] dr-kvs-372026249783-20220510070335-f95894a9-1c70-41d4-870e-12c17b41a30d PutFrame failed. Error code: 4102[0m
+s3 failed, retry after 4.324331314712093 seconds. Re-try count: 2/5: An error occurred (404) when calling the HeadObject operation: Not Found
+s3 failed, retry after 9.163051716811285 seconds. Re-try count: 3/5: An error occurred (404) when calling the HeadObject operation: Not Found
+[s3] Successfully downloaded 3_Step-0.ckpt.data-00000-of-00001 from                  s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/model/3_Step-0.ckpt.data-00000-of-00001 to local checkpoint_robomaker/agent/3_Step-0.ckpt.data-00000-of-00001.
+[s3] Successfully downloaded 3_Step-0.ckpt.index from                  s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/model/3_Step-0.ckpt.index to local checkpoint_robomaker/agent/3_Step-0.ckpt.index.
+[s3] Successfully downloaded 3_Step-0.ckpt.meta from                  s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/model/3_Step-0.ckpt.meta to local checkpoint_robomaker/agent/3_Step-0.ckpt.meta.
+[s3] Successfully downloaded .ready from                  s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/model/.ready to local checkpoint_robomaker/agent/.ready.
+[s3] Successfully downloaded .ready from                  s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/model/.ready to local checkpoint_robomaker/agent/.ready.
+## Creating graph - name: MultiAgentGraphManager
+## Start physics before creating graph
+## Create graph
+## Creating agent - name: agent
+[RL] Created agent loggers
+[RL] Dynamic import of memory:  "DeepRacerMemoryParameters" {
+    "load_memory_from_file_path": null,
+    "max_size": [
+        "<MemoryGranularity.Transitions: 0>",
+        1000000
+    ],
+    "n_step": -1,
+    "shared_memory": false,
+    "train_to_eval_ratio": 1
+}
+[RL] Dynamically imported of memory <markov.memories.deepracer_memory.DeepRacerMemory object at 0x7fcf24fa6d68>
+[RL] Setting devices
+[RL] Setting filters
+[RL] Setting filter devices: numpy
+[RL] Setting Phase
+[RL] After setting Phase
+[RL] Setting signals
+[RL] Agent init successful
+[RL] ActorCriticAgent init
+[RL] ActorCriticAgent  init successful
+## Created agent: agent
+## Stop physics after creating graph
+## Creating session
+2022-05-10 07:09:55.372733: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+Checkpoint> Restoring from path=./checkpoint_robomaker/agent/3_Step-0.ckpt
+[BestModelSelection] Number of evaluations: 0 Evaluation episode progress: []
+[BestModelSelection] Evaluation episode progress mean: None
+[BestModelSelection] current progress mean: None >= best progress mean: None
+[BestModelSelection] Updating the best checkpoint to "3_Step-0.ckpt" from "None".
+[s3] Successfully uploaded deepracer checkpoint to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/sagemaker-robomaker-artifacts/model/deepracer_checkpoints.json.
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:0,1,8.4085,3.1732,-179.7014,6.70,1.70,8,0.0000,False,True,0.5567,1,25.17,20.405,prepare,0.00
+SIM_TRACE_LOG:0,2,8.4086,3.1732,-179.6984,0.00,2.00,15,86994.3436,False,True,0.5562,1,25.17,20.472,in_progress,0.00
+SIM_TRACE_LOG:0,3,8.4001,3.1732,-179.7153,-6.70,1.70,4,28850.7137,False,True,0.5898,1,25.17,20.54,in_progress,0.00
+SIM_TRACE_LOG:0,4,8.3727,3.1724,-179.6031,-6.70,2.50,5,26066.9029,False,True,0.6988,1,25.17,20.608,in_progress,0.00
+SIM_TRACE_LOG:0,5,8.3331,3.1738,179.9982,-6.70,2.50,5,22.8444,False,True,0.8561,1,25.17,20.672,in_progress,0.00
+SIM_TRACE_LOG:0,6,8.2721,3.1767,179.2486,0.00,4.00,6,35.0397,False,True,1.0982,1,25.17,20.742,in_progress,0.00
+SIM_TRACE_LOG:0,7,8.1960,3.1803,178.6450,0.00,2.00,15,17.8864,False,True,1.4001,2,25.17,20.768,in_progress,0.00
+SIM_TRACE_LOG:0,8,8.1123,3.1808,179.0071,0.00,2.00,15,20383.3291,False,True,1.7335,2,25.17,20.875,in_progress,0.00
+SIM_TRACE_LOG:0,9,8.0070,3.1803,179.5326,0.00,2.00,15,25386.1882,False,True,2.1517,3,25.17,20.94,in_progress,0.00
+SIM_TRACE_LOG:0,10,7.8888,3.1808,179.5573,0.00,2.00,15,31092.6720,False,True,2.6220,3,25.17,21.004,in_progress,0.00
+SIM_TRACE_LOG:0,11,7.7764,3.1788,-179.9272,20.00,0.50,12,2.4948,False,True,3.0684,4,25.17,21.072,in_progress,0.00
+SIM_TRACE_LOG:0,12,7.6422,3.1751,-179.2612,-6.70,1.00,3,26013.1759,False,True,3.6010,4,25.17,21.138,in_progress,0.00
+SIM_TRACE_LOG:0,13,7.5341,3.1657,-177.6043,6.70,2.50,9,52963.6602,False,True,4.0311,5,25.17,21.206,in_progress,0.00
+SIM_TRACE_LOG:0,14,7.4274,3.1519,-175.6126,6.70,2.50,9,43037.4087,False,True,4.4559,6,25.17,21.267,in_progress,0.00
+SIM_TRACE_LOG:0,15,7.3134,3.1303,-172.8999,-6.70,1.00,3,14.1066,False,True,4.9026,6,25.17,21.321,in_progress,0.00
+SIM_TRACE_LOG:0,16,7.1795,3.1038,-170.6502,0.00,4.00,6,52.5265,False,True,5.4308,7,25.17,21.409,in_progress,0.00
+SIM_TRACE_LOG:0,17,7.0622,3.0808,-169.9438,-20.00,0.50,0,1.3274,False,True,5.8306,7,25.17,21.476,in_progress,0.00
+SIM_TRACE_LOG:0,18,6.9509,3.0583,-169.0257,-13.30,0.80,1,5.1608,False,True,6.2483,8,25.17,21.541,in_progress,0.00
+SIM_TRACE_LOG:0,19,6.8518,3.0392,-169.0709,6.70,2.50,9,15.3320,False,True,6.5392,8,25.17,21.606,in_progress,0.00
+SIM_TRACE_LOG:0,20,6.7435,3.0192,-169.2593,-13.30,1.30,2,5.1864,False,True,6.9273,9,25.17,21.671,in_progress,0.00
+SIM_TRACE_LOG:0,21,6.6295,2.9957,-168.9712,30.00,0.30,14,0.2932,False,True,7.2832,9,25.17,21.741,in_progress,0.00
+SIM_TRACE_LOG:0,22,6.5303,2.9738,-168.3787,0.00,2.00,15,5.5609,False,True,7.6260,10,25.17,21.809,in_progress,0.00
+SIM_TRACE_LOG:0,23,6.4378,2.9491,-167.1936,20.00,0.50,12,0.2450,False,True,8.2159,10,25.17,21.873,in_progress,0.00
+SIM_TRACE_LOG:0,24,6.3457,2.9172,-164.9892,0.00,4.00,6,4.6025,False,True,8.5555,11,25.17,21.938,in_progress,0.00
+SIM_TRACE_LOG:0,25,6.2530,2.8774,-161.7943,6.70,2.50,9,224.8649,False,False,9.9960,12,25.17,22.008,in_progress,0.00
+SIM_TRACE_LOG:0,26,6.1488,2.8245,-157.8504,6.70,1.70,8,137.7540,False,False,10.4056,13,25.17,22.07,in_progress,0.00
+SIM_TRACE_LOG:0,27,6.0487,2.7643,-154.1446,-6.70,2.50,5,100.7625,False,False,10.7888,13,25.17,22.136,in_progress,0.00
+SIM_TRACE_LOG:0,28,5.9390,2.6952,-151.2101,6.70,1.70,8,-4.9129,False,False,11.2049,14,25.17,22.199,in_progress,0.00
+SIM_TRACE_LOG:0,29,5.8308,2.6213,-148.6277,6.70,1.70,8,-63.1563,False,False,11.2443,14,25.17,22.277,in_progress,0.00
+SIM_TRACE_LOG:0,30,5.7324,2.5423,-145.2958,-13.30,0.80,1,-45.0360,False,False,11.6642,15,25.17,22.321,in_progress,0.00
+SIM_TRACE_LOG:0,31,5.6352,2.4630,-143.1482,30.00,0.30,14,0.0010,True,False,12.0717,15,25.17,22.391,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=1, Total reward=341321.28, Steps=31, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:1,1,7.1499,3.1749,178.1567,0.00,2.00,15,0.0000,False,True,0.5573,7,25.17,22.538,prepare,0.00
+SIM_TRACE_LOG:1,2,7.1498,3.1747,178.2118,-6.70,1.00,3,30880.2657,False,True,0.5576,7,25.17,22.605,in_progress,0.00
+SIM_TRACE_LOG:1,3,7.1422,3.1732,178.6240,6.70,2.50,9,27283.4328,False,True,0.5876,7,25.17,22.663,in_progress,0.00
+SIM_TRACE_LOG:1,4,7.1202,3.1713,179.2403,30.00,0.30,14,511.3423,False,True,0.6712,7,25.17,22.733,in_progress,0.00
+SIM_TRACE_LOG:1,5,7.0946,3.1663,-179.5657,13.30,1.30,11,4.4629,False,True,0.7674,7,25.17,22.804,in_progress,0.00
+SIM_TRACE_LOG:1,6,7.0661,3.1600,-178.1102,-6.70,1.70,4,5.3552,False,True,0.8738,7,25.17,22.859,in_progress,0.00
+SIM_TRACE_LOG:1,7,7.0171,3.1512,-176.4676,30.00,0.30,14,0.2363,False,True,1.0589,8,25.17,22.94,in_progress,0.00
+SIM_TRACE_LOG:1,8,6.9656,3.1395,-174.4960,-6.70,1.70,4,4.3572,False,True,1.2510,8,25.17,23.008,in_progress,0.00
+SIM_TRACE_LOG:1,9,6.9132,3.1265,-172.7097,6.70,1.70,8,3.7387,False,True,1.4075,8,25.17,23.072,in_progress,0.00
+SIM_TRACE_LOG:1,10,6.8408,3.1049,-169.9896,-13.30,1.30,2,2.1006,False,True,1.6569,8,25.17,23.137,in_progress,0.00
+SIM_TRACE_LOG:1,11,6.7634,3.0800,-167.5898,0.00,2.00,15,3.7600,False,True,1.9221,9,25.17,23.207,in_progress,0.00
+SIM_TRACE_LOG:1,12,6.6719,3.0498,-165.4704,6.70,2.50,9,3.5280,False,True,2.2080,9,25.17,23.248,in_progress,0.00
+SIM_TRACE_LOG:1,13,6.5721,3.0060,-161.7274,-30.00,0.30,13,0.0860,False,True,2.5121,9,25.17,23.338,in_progress,0.00
+SIM_TRACE_LOG:1,14,6.4710,2.9581,-157.8539,6.70,1.00,7,0.6550,False,True,2.8276,10,25.17,23.4,in_progress,0.00
+SIM_TRACE_LOG:1,15,6.3892,2.9209,-157.0797,30.00,0.30,14,0.0401,False,True,3.3879,10,25.17,23.469,in_progress,0.00
+SIM_TRACE_LOG:1,16,6.3206,2.8795,-154.5472,20.00,0.50,12,23.7434,False,True,4.1547,11,25.17,23.54,in_progress,0.00
+SIM_TRACE_LOG:1,17,6.2696,2.8448,-152.3793,6.70,1.70,8,27.2380,False,False,4.9858,12,25.17,23.605,in_progress,0.00
+SIM_TRACE_LOG:1,18,6.2178,2.8071,-150.2041,-13.30,0.80,1,3.5393,False,False,5.2340,13,25.17,23.67,in_progress,0.00
+SIM_TRACE_LOG:1,19,6.1558,2.7611,-148.2183,6.70,1.00,7,-6.4234,False,False,5.4056,13,25.17,23.743,in_progress,0.00
+SIM_TRACE_LOG:1,20,6.0970,2.7189,-147.1521,6.70,2.50,9,-43.6637,False,False,5.6668,13,25.17,23.802,in_progress,0.00
+SIM_TRACE_LOG:1,21,6.0403,2.6735,-145.4676,-20.00,0.50,0,-4.0398,False,False,5.9391,14,25.17,23.876,in_progress,0.00
+SIM_TRACE_LOG:1,22,5.9817,2.6263,-143.7777,-13.30,1.30,2,-24.3737,False,False,6.2049,14,25.17,23.944,in_progress,0.00
+SIM_TRACE_LOG:1,23,5.9215,2.5813,-143.6418,-6.70,1.70,4,-45.2049,False,False,6.2049,14,25.17,24.004,in_progress,0.00
+SIM_TRACE_LOG:1,24,5.8650,2.5340,-142.5966,0.00,2.00,15,-66.7447,False,False,6.2049,14,25.17,24.074,in_progress,0.00
+SIM_TRACE_LOG:1,25,5.7944,2.4718,-141.1783,13.30,0.80,10,0.0010,True,False,6.4465,14,25.17,24.134,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=2, Total reward=58567.43, Steps=56, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:2,1,5.9379,3.2580,-156.9863,-13.30,0.80,1,0.0000,False,True,0.5571,13,25.17,24.273,prepare,0.00
+SIM_TRACE_LOG:2,2,5.9381,3.2582,-156.9964,-6.70,1.00,3,21007.2855,False,True,0.5558,13,25.17,24.328,in_progress,0.00
+SIM_TRACE_LOG:2,3,5.9314,3.2551,-156.9540,30.00,0.30,14,821.4101,False,True,0.5850,13,25.17,24.41,in_progress,0.00
+SIM_TRACE_LOG:2,4,5.9140,3.2453,-156.4187,6.70,2.50,9,15221.8517,False,True,0.6634,13,25.17,24.466,in_progress,0.00
+SIM_TRACE_LOG:2,5,5.8897,3.2319,-155.7498,-13.30,0.80,1,3095.2132,False,True,0.7721,13,25.17,24.542,in_progress,0.00
+SIM_TRACE_LOG:2,6,5.8529,3.2145,-155.7250,-20.00,0.50,0,600.0635,False,True,0.9329,14,25.17,24.605,in_progress,0.00
+SIM_TRACE_LOG:2,7,5.8202,3.2015,-156.0344,-13.30,0.80,1,2719.9345,False,True,1.0725,14,25.17,24.674,in_progress,0.00
+SIM_TRACE_LOG:2,8,5.7755,3.1844,-156.6959,6.70,1.70,8,4321.1995,False,True,1.2437,14,25.17,24.739,in_progress,0.00
+SIM_TRACE_LOG:2,9,5.7245,3.1635,-156.9227,30.00,0.30,14,190.4106,False,True,1.4535,14,25.17,24.802,in_progress,0.00
+SIM_TRACE_LOG:2,10,5.6863,3.1437,-156.3152,0.00,2.00,15,4301.0800,False,True,1.6123,15,25.17,24.873,in_progress,0.00
+SIM_TRACE_LOG:2,11,5.6347,3.1121,-154.4628,6.70,1.70,8,2721.5058,False,True,1.8284,15,25.17,24.939,in_progress,0.00
+SIM_TRACE_LOG:2,12,5.5786,3.0789,-153.1360,-6.70,1.00,3,1373.3428,False,True,2.0619,15,25.17,25.004,in_progress,0.00
+SIM_TRACE_LOG:2,13,5.5187,3.0401,-151.3885,20.00,0.50,12,160.0047,False,True,2.3136,15,25.17,25.049,in_progress,0.00
+SIM_TRACE_LOG:2,14,5.4627,3.0004,-149.5736,-6.70,1.00,3,941.3386,False,True,2.5499,16,25.17,25.141,in_progress,0.00
+SIM_TRACE_LOG:2,15,5.4086,2.9642,-148.7371,-13.30,1.30,2,870.2035,False,True,2.7778,16,25.17,25.216,in_progress,0.00
+SIM_TRACE_LOG:2,16,5.3448,2.9254,-148.7377,-20.00,0.50,0,76.4174,False,True,2.9724,16,25.17,25.25,in_progress,0.00
+SIM_TRACE_LOG:2,17,5.2841,2.8965,-150.3294,-6.70,1.70,4,904.1137,False,True,3.2159,17,25.17,25.341,in_progress,0.00
+SIM_TRACE_LOG:2,18,5.2170,2.8693,-152.4946,20.00,0.50,12,73.7323,False,True,3.4845,17,25.17,25.409,in_progress,0.00
+SIM_TRACE_LOG:2,19,5.1508,2.8388,-153.5486,6.70,2.50,9,2.4116,False,True,3.7238,17,25.17,25.476,in_progress,0.00
+SIM_TRACE_LOG:2,20,5.0875,2.8077,-153.6299,-13.30,0.80,1,0.5390,False,True,3.9752,17,25.17,25.541,in_progress,0.00
+SIM_TRACE_LOG:2,21,5.0175,2.7805,-155.3135,6.70,2.50,9,1.7160,False,True,4.2530,18,25.17,25.602,in_progress,0.00
+SIM_TRACE_LOG:2,22,4.9493,2.7541,-156.2944,20.00,0.50,12,0.0770,False,True,4.4920,18,25.17,25.667,in_progress,0.00
+SIM_TRACE_LOG:2,23,4.8801,2.7218,-156.3450,6.70,2.50,9,0.9975,False,True,4.7640,18,25.17,25.737000000000002,in_progress,0.00
+SIM_TRACE_LOG:2,24,4.8201,2.6883,-154.8692,-13.30,1.30,2,0.2581,False,True,4.9999,19,25.17,25.795,in_progress,0.00
+SIM_TRACE_LOG:2,25,4.7560,2.6579,-154.8371,0.00,2.00,15,0.0224,False,False,5.2778,19,25.17,25.857,in_progress,0.00
+SIM_TRACE_LOG:2,26,4.6726,2.6186,-154.7696,-6.70,1.00,3,-0.0072,False,False,5.6079,19,25.17,25.937,in_progress,0.00
+SIM_TRACE_LOG:2,27,4.5903,2.5836,-155.4871,-13.30,0.80,1,-0.0152,False,False,5.9336,20,25.17,26.008,in_progress,0.00
+SIM_TRACE_LOG:2,28,4.5114,2.5525,-156.4037,20.00,0.50,12,-2.7384,False,False,6.2804,20,25.17,26.074,in_progress,0.00
+SIM_TRACE_LOG:2,29,4.4389,2.5255,-157.3636,-20.00,0.50,0,-3.7381,False,False,6.5691,21,25.17,26.142,in_progress,0.00
+SIM_TRACE_LOG:2,30,4.3863,2.5074,-158.1495,-13.30,1.30,2,-34.1736,False,False,6.7785,21,25.17,26.197,in_progress,0.00
+SIM_TRACE_LOG:2,31,4.3312,2.4911,-159.4106,-13.30,0.80,1,-23.9876,False,False,6.9806,21,25.17,26.273,in_progress,0.00
+SIM_TRACE_LOG:2,32,4.2713,2.4739,-160.4817,13.30,1.30,11,0.0010,True,False,7.2187,22,25.17,26.339,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=3, Total reward=59340.47, Steps=88, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:3,1,4.6895,3.1696,178.8444,-6.70,1.00,3,0.0000,False,True,0.5572,19,25.17,26.47,prepare,0.00
+SIM_TRACE_LOG:3,2,4.6898,3.1696,178.8411,-13.30,1.30,2,26183.9499,False,True,0.5561,19,25.17,26.534,in_progress,0.00
+SIM_TRACE_LOG:3,3,4.6837,3.1682,179.2182,6.70,1.70,8,23829.8111,False,True,0.5803,19,25.17,26.606,in_progress,0.00
+SIM_TRACE_LOG:3,4,4.6642,3.1688,179.0900,6.70,2.50,9,28521.9203,False,True,0.6578,20,25.17,26.672,in_progress,0.00
+SIM_TRACE_LOG:3,5,4.6262,3.1699,178.9258,6.70,1.70,8,14168.7247,False,True,0.8087,20,25.17,26.702,in_progress,0.00
+SIM_TRACE_LOG:3,6,4.5814,3.1724,178.5140,-6.70,1.00,3,7052.6575,False,True,0.9866,20,25.17,26.78,in_progress,0.00
+SIM_TRACE_LOG:3,7,4.5154,3.1770,177.7829,0.00,4.00,6,30.0247,False,True,1.2485,20,25.17,26.872,in_progress,0.00
+SIM_TRACE_LOG:3,8,4.4483,3.1822,177.2172,0.00,4.00,6,29.5449,False,True,1.5150,21,25.17,26.941,in_progress,0.00
+SIM_TRACE_LOG:3,9,4.3635,3.1860,177.3409,0.00,4.00,6,32.3344,False,True,1.8524,21,25.17,27.011,in_progress,0.00
+SIM_TRACE_LOG:3,10,4.2690,3.1916,177.0658,0.00,4.00,6,34.8158,False,True,2.2276,22,25.17,27.071,in_progress,0.00
+SIM_TRACE_LOG:3,11,4.1523,3.1973,177.1767,30.00,0.30,14,733.4594,False,True,2.6916,22,25.17,27.135,in_progress,0.00
+SIM_TRACE_LOG:3,12,4.0374,3.1949,178.4907,13.30,1.30,11,11358.7945,False,True,3.1482,23,25.17,27.183,in_progress,0.00
+SIM_TRACE_LOG:3,13,3.9435,3.1876,-179.4695,-6.70,1.00,3,12.4512,False,True,3.5212,23,25.17,27.277,in_progress,0.00
+SIM_TRACE_LOG:3,14,3.8450,3.1817,-178.4434,-30.00,0.30,13,1.2417,False,True,3.9121,24,25.17,27.337,in_progress,0.00
+SIM_TRACE_LOG:3,15,3.7592,3.1831,-179.3632,6.70,2.50,9,37.5129,False,True,4.2533,24,25.17,27.4,in_progress,0.00
+SIM_TRACE_LOG:3,16,3.6653,3.1892,179.1208,-13.30,1.30,2,15285.4904,False,True,4.6261,25,25.17,27.47,in_progress,0.00
+SIM_TRACE_LOG:3,17,3.5738,3.1972,177.7327,0.00,2.00,15,29091.3511,False,True,4.9899,25,25.17,27.532,in_progress,0.00
+SIM_TRACE_LOG:3,18,3.4605,3.2068,176.6595,6.70,1.00,7,12515.2089,False,True,5.4402,26,25.17,27.608,in_progress,0.00
+SIM_TRACE_LOG:3,19,3.3669,3.2143,176.1891,-6.70,1.00,3,11965.6140,False,True,5.8122,26,25.17,27.671,in_progress,0.00
+SIM_TRACE_LOG:3,20,3.2708,3.2187,176.6301,-13.30,1.30,2,12793.4214,False,True,6.1935,26,25.17,27.714,in_progress,0.00
+SIM_TRACE_LOG:3,21,3.1760,3.2266,176.0782,-6.70,1.70,4,19216.5276,False,True,6.5704,27,25.17,27.803,in_progress,0.00
+SIM_TRACE_LOG:3,22,3.0864,3.2406,174.3540,6.70,2.50,9,25884.6770,False,True,6.9281,27,25.17,27.868,in_progress,0.00
+SIM_TRACE_LOG:3,23,2.9830,3.2538,173.6933,-30.00,0.30,13,814.4181,False,True,7.3392,28,25.17,27.931,in_progress,0.00
+SIM_TRACE_LOG:3,24,2.8808,3.2737,171.9796,13.30,1.30,11,9635.7184,False,True,7.7473,28,25.17,27.992,in_progress,0.00
+SIM_TRACE_LOG:3,25,2.7907,3.2922,170.8200,30.00,0.30,14,676.3873,False,True,8.1061,29,25.17,28.06,in_progress,0.00
+SIM_TRACE_LOG:3,26,2.7118,3.3004,171.7694,6.70,1.00,7,7740.0764,False,True,8.4140,29,25.17,28.141,in_progress,0.00
+SIM_TRACE_LOG:3,27,2.6421,3.3075,172.3975,-30.00,0.30,13,613.8786,False,True,8.6911,30,25.17,28.187,in_progress,0.00
+SIM_TRACE_LOG:3,28,2.5816,3.3147,172.6354,6.70,1.00,7,6959.7762,False,True,8.9314,30,25.17,28.272,in_progress,0.00
+SIM_TRACE_LOG:3,29,2.5196,3.3226,172.6312,-6.70,1.00,3,6.5280,False,True,9.1665,30,25.17,28.337,in_progress,0.00
+SIM_TRACE_LOG:3,30,2.4549,3.3298,172.8317,-30.00,0.30,13,0.5141,False,True,9.4231,31,25.17,28.404,in_progress,0.00
+SIM_TRACE_LOG:3,31,2.3949,3.3450,171.1133,-13.30,0.80,1,3.7201,False,True,9.6603,31,25.17,28.473,in_progress,0.00
+SIM_TRACE_LOG:3,32,2.3483,3.3583,169.7466,-13.30,1.30,2,5.4545,False,True,9.8224,31,25.17,28.532,in_progress,0.00
+SIM_TRACE_LOG:3,33,2.2778,3.3813,167.4420,-30.00,0.30,13,0.3641,False,True,10.0960,31,25.17,28.603,in_progress,0.00
+SIM_TRACE_LOG:3,34,2.2298,3.4041,164.6292,6.70,1.00,7,3.7504,False,True,10.2821,32,25.17,28.668,in_progress,0.00
+SIM_TRACE_LOG:3,35,2.1756,3.4329,161.4930,0.00,2.00,15,6.9262,False,True,10.4914,32,25.17,28.741,in_progress,0.00
+SIM_TRACE_LOG:3,36,2.1055,3.4707,158.4429,13.30,0.80,10,1.6575,False,True,10.7972,32,25.17,28.803,in_progress,0.00
+SIM_TRACE_LOG:3,37,2.0468,3.5024,156.5212,6.70,1.00,7,1.9997,False,True,11.0277,33,25.17,28.863,in_progress,0.00
+SIM_TRACE_LOG:3,38,1.9820,3.5382,154.9691,13.30,0.80,10,1.0156,False,True,11.2821,33,25.17,28.938,in_progress,0.00
+SIM_TRACE_LOG:3,39,1.9243,3.5669,154.6296,-6.70,2.50,5,1575.7353,False,True,11.5890,33,25.17,29.005,in_progress,0.00
+SIM_TRACE_LOG:3,40,1.8582,3.5985,154.5428,13.30,1.30,11,497.6875,False,True,11.8550,34,25.17,29.06,in_progress,0.00
+SIM_TRACE_LOG:3,41,1.7761,3.6375,154.5514,6.70,1.00,7,389.9122,False,True,12.4465,34,25.17,29.139,in_progress,0.00
+SIM_TRACE_LOG:3,42,1.7036,3.6718,154.5823,13.30,0.80,10,16.3539,False,False,12.7530,35,25.17,29.21,in_progress,0.00
+SIM_TRACE_LOG:3,43,1.6342,3.7026,155.0107,6.70,1.70,8,45.2370,False,False,13.3675,35,25.17,29.268,in_progress,0.00
+SIM_TRACE_LOG:3,44,1.5519,3.7350,156.1714,-6.70,1.00,3,23.2034,False,False,13.7188,36,25.17,29.345,in_progress,0.00
+SIM_TRACE_LOG:3,45,1.4788,3.7661,156.3894,-6.70,1.00,3,23.5134,False,False,14.2081,36,25.17,29.406,in_progress,0.00
+SIM_TRACE_LOG:3,46,1.4095,3.7981,155.9801,0.00,4.00,6,95.8340,False,False,14.5111,37,25.17,29.474,in_progress,0.00
+SIM_TRACE_LOG:3,47,1.3331,3.8355,155.2888,13.30,0.80,10,7.6207,False,False,14.6259,37,25.17,29.534,in_progress,0.00
+SIM_TRACE_LOG:3,48,1.2605,3.8642,155.4889,6.70,1.70,8,6.6855,False,False,14.7950,37,25.17,29.587,in_progress,0.00
+SIM_TRACE_LOG:3,49,1.1777,3.8960,156.5708,6.70,2.50,9,-13.6316,False,False,15.1442,38,25.17,29.661,in_progress,0.00
+SIM_TRACE_LOG:3,50,1.0837,3.9298,157.9303,0.00,4.00,6,-44.3729,False,False,15.4259,38,25.17,29.742,in_progress,0.00
+SIM_TRACE_LOG:3,51,0.9731,3.9683,159.1214,6.70,2.50,9,-66.8715,False,False,15.6046,38,25.17,29.779,in_progress,0.00
+SIM_TRACE_LOG:3,52,0.8492,4.0051,161.2720,6.70,1.00,7,-46.5935,False,False,16.1045,39,25.17,29.871,in_progress,0.00
+SIM_TRACE_LOG:3,53,0.7218,4.0349,163.9159,-30.00,0.30,13,-0.0074,False,False,16.2258,39,25.17,29.936,in_progress,0.00
+SIM_TRACE_LOG:3,54,0.6109,4.0624,164.7805,20.00,0.50,12,-0.0163,False,False,16.2258,39,25.17,30.007,in_progress,0.00
+SIM_TRACE_LOG:3,55,0.5221,4.0801,166.2055,-6.70,1.70,4,0.0010,True,False,16.4654,39,25.17,30.071,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=4, Total reward=267762.01, Steps=143, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:4,1,3.4309,3.1713,179.7014,6.70,1.00,7,0.0000,False,True,0.5569,26,25.17,30.206,prepare,0.00
+SIM_TRACE_LOG:4,2,3.4311,3.1713,179.7250,-30.00,0.30,13,3752.7824,False,True,0.5562,26,25.17,30.27,in_progress,0.00
+SIM_TRACE_LOG:4,3,3.4248,3.1715,179.6105,-13.30,1.30,2,17945.6267,False,True,0.5813,26,25.17,30.339,in_progress,0.00
+SIM_TRACE_LOG:4,4,3.4054,3.1711,179.7108,0.00,2.00,15,22190.0117,False,True,0.6583,26,25.17,30.409,in_progress,0.00
+SIM_TRACE_LOG:4,5,3.3712,3.1714,179.6439,20.00,0.50,12,1419.5075,False,True,0.7944,26,25.17,30.473,in_progress,0.00
+SIM_TRACE_LOG:4,6,3.3283,3.1692,-179.8231,-6.70,2.50,5,17.5141,False,True,0.9648,26,25.17,30.542,in_progress,0.00
+SIM_TRACE_LOG:4,7,3.2842,3.1644,-178.6698,13.30,0.80,10,3.8267,False,True,1.1399,26,25.17,30.617,in_progress,0.00
+SIM_TRACE_LOG:4,8,3.2300,3.1561,-176.9821,0.00,2.00,15,11.3541,False,True,1.3552,27,25.17,30.671,in_progress,0.00
+SIM_TRACE_LOG:4,9,3.1656,3.1475,-175.8539,0.00,4.00,6,22.1635,False,True,1.6108,27,25.17,30.749,in_progress,0.00
+SIM_TRACE_LOG:4,10,3.0842,3.1360,-174.6012,-6.70,1.70,4,8.5976,False,True,1.9330,27,25.17,30.807,in_progress,0.00
+SIM_TRACE_LOG:4,11,2.9870,3.1257,-174.5082,6.70,1.70,8,9.2116,False,True,2.3190,28,25.17,30.876,in_progress,0.00
+SIM_TRACE_LOG:4,12,2.8947,3.1177,-174.7417,6.70,1.70,8,9.6268,False,True,2.6842,28,25.17,30.941,in_progress,0.00
+SIM_TRACE_LOG:4,13,2.7895,3.1034,-173.8128,0.00,4.00,6,25.5296,False,True,3.1014,29,25.17,31.007,in_progress,0.00
+SIM_TRACE_LOG:4,14,2.6825,3.0884,-173.0968,30.00,0.30,14,0.4829,False,True,3.5301,29,25.17,31.069,in_progress,0.00
+SIM_TRACE_LOG:4,15,2.5656,3.0676,-172.6925,-6.70,1.70,4,9.6880,False,True,3.9945,30,25.17,31.138,in_progress,0.00
+SIM_TRACE_LOG:4,16,2.4605,3.0446,-170.7983,6.70,1.70,8,9269.2164,False,True,4.4216,30,25.17,31.214,in_progress,0.00
+SIM_TRACE_LOG:4,17,2.3215,3.0074,-167.9526,-6.70,1.00,3,5172.1785,False,True,4.9972,31,25.17,31.265,in_progress,0.00
+SIM_TRACE_LOG:4,18,2.2392,2.9819,-166.0843,6.70,1.00,7,3664.1123,False,True,5.3287,32,25.17,31.343,in_progress,0.00
+SIM_TRACE_LOG:4,19,2.1366,2.9453,-163.7908,-13.30,0.80,1,1925.0056,False,True,5.7184,32,25.17,31.407,in_progress,0.00
+SIM_TRACE_LOG:4,20,2.0493,2.9141,-162.2883,6.70,1.70,8,4101.9854,False,True,6.0678,33,25.17,31.475,in_progress,0.00
+SIM_TRACE_LOG:4,21,1.9628,2.8829,-161.5960,20.00,0.50,12,284.1057,False,True,6.4140,33,25.17,31.553,in_progress,0.00
+SIM_TRACE_LOG:4,22,1.8780,2.8449,-159.7382,6.70,2.50,9,6.1358,False,True,6.6923,33,25.17,31.604,in_progress,0.00
+SIM_TRACE_LOG:4,23,1.8039,2.8053,-157.2164,6.70,1.00,7,1.8620,False,True,6.9821,34,25.17,31.671,in_progress,0.00
+SIM_TRACE_LOG:4,24,1.7225,2.7579,-154.6206,-30.00,0.30,13,0.1024,False,True,7.2252,34,25.17,31.732,in_progress,0.00
+SIM_TRACE_LOG:4,25,1.6578,2.7220,-153.3290,-6.70,2.50,5,1.7703,False,True,7.3053,34,25.17,31.809,in_progress,0.00
+SIM_TRACE_LOG:4,26,1.5867,2.6867,-153.4709,-13.30,0.80,1,0.1861,False,True,7.5607,34,25.17,31.867,in_progress,0.00
+SIM_TRACE_LOG:4,27,1.5126,2.6544,-154.4616,20.00,0.50,12,-0.0012,False,False,7.8293,35,25.17,31.942,in_progress,0.00
+SIM_TRACE_LOG:4,28,1.4519,2.6271,-154.7484,0.00,4.00,6,-0.1579,False,False,8.0255,35,25.17,32.003,in_progress,0.00
+SIM_TRACE_LOG:4,29,1.3868,2.5980,-155.1163,6.70,1.00,7,-0.0608,False,False,8.0255,35,25.17,32.028,in_progress,0.00
+SIM_TRACE_LOG:4,30,1.3140,2.5595,-153.9338,-13.30,0.80,1,-0.0611,False,False,8.1159,35,25.17,32.145,in_progress,0.00
+SIM_TRACE_LOG:4,31,1.2553,2.5275,-153.2659,20.00,0.50,12,-0.0160,False,False,8.2960,35,25.17,32.204,in_progress,0.00
+SIM_TRACE_LOG:4,32,1.1950,2.4969,-153.1854,6.70,2.50,9,0.0010,True,False,8.4840,36,25.17,32.277,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=5, Total reward=69852.29, Steps=175, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:5,1,2.1726,3.1636,-177.1084,-20.00,0.50,0,0.0000,False,True,0.5571,32,25.17,32.395,prepare,0.00
+SIM_TRACE_LOG:5,2,2.1728,3.1636,-177.1241,13.30,0.80,10,90618.3139,False,True,0.5562,32,25.17,32.474,in_progress,0.00
+SIM_TRACE_LOG:5,3,2.1640,3.1629,-177.0516,13.30,1.30,11,15704.4705,False,True,0.5910,32,25.17,32.543,in_progress,0.00
+SIM_TRACE_LOG:5,4,2.1421,3.1599,-176.6009,20.00,0.50,12,1077.3654,False,True,0.6784,32,25.17,32.596000000000004,in_progress,0.00
+SIM_TRACE_LOG:5,5,2.1096,3.1528,-175.4112,6.70,1.00,7,5397.2787,False,True,0.8082,32,25.17,32.675,in_progress,0.00
+SIM_TRACE_LOG:5,6,2.0649,3.1435,-174.1177,20.00,0.50,12,650.6178,False,True,0.9862,32,25.17,32.738,in_progress,0.00
+SIM_TRACE_LOG:5,7,2.0285,3.1322,-172.3492,20.00,0.50,12,543.0486,False,True,1.1320,33,25.17,32.802,in_progress,0.00
+SIM_TRACE_LOG:5,8,1.9877,3.1179,-170.2768,-6.70,1.70,4,5772.3473,False,True,1.2953,33,25.17,32.87,in_progress,0.00
+SIM_TRACE_LOG:5,9,1.9447,3.1025,-168.4549,-13.30,0.80,1,1.9886,False,True,1.4564,33,25.17,32.935,in_progress,0.00
+SIM_TRACE_LOG:5,10,1.8899,3.0868,-167.4598,-6.70,1.00,3,2.8062,False,True,1.6722,33,25.17,33.009,in_progress,0.00
+SIM_TRACE_LOG:5,11,1.8307,3.0675,-166.1274,-6.70,1.00,3,2.6267,False,True,1.9050,34,25.17,33.074,in_progress,0.00
+SIM_TRACE_LOG:5,12,1.7662,3.0471,-165.2173,-30.00,0.30,13,0.2074,False,True,2.1590,34,25.17,33.141,in_progress,0.00
+SIM_TRACE_LOG:5,13,1.7085,3.0328,-165.4476,13.30,0.80,10,1.4496,False,True,2.3121,34,25.17,33.204,in_progress,0.00
+SIM_TRACE_LOG:5,14,1.6471,3.0188,-165.8423,20.00,0.50,12,0.2774,False,True,2.5432,34,25.17,33.272,in_progress,0.00
+SIM_TRACE_LOG:5,15,1.5974,3.0017,-164.8428,0.00,4.00,6,7.8122,False,True,2.7267,35,25.17,33.334,in_progress,0.00
+SIM_TRACE_LOG:5,16,1.5392,2.9809,-163.6849,6.70,2.50,9,3.8490,False,True,2.9410,35,25.17,33.404,in_progress,0.00
+SIM_TRACE_LOG:5,17,1.4637,2.9513,-161.9780,-6.70,1.00,3,1.1541,False,True,3.0519,35,25.17,33.466,in_progress,0.00
+SIM_TRACE_LOG:5,18,1.3943,2.9232,-160.8659,6.70,2.50,9,2.2500,False,True,3.2772,35,25.17,33.537,in_progress,0.00
+SIM_TRACE_LOG:5,19,1.3179,2.8909,-159.6681,-13.30,1.30,2,0.7055,False,True,3.5236,36,25.17,33.609,in_progress,0.00
+SIM_TRACE_LOG:5,20,1.2292,2.8526,-158.5800,20.00,0.50,12,0.0541,False,True,3.8084,36,25.17,33.663,in_progress,0.00
+SIM_TRACE_LOG:5,21,1.1566,2.8218,-158.2461,6.70,2.50,9,0.3927,False,True,3.8768,36,25.17,33.701,in_progress,0.00
+SIM_TRACE_LOG:5,22,1.0741,2.7853,-157.5400,20.00,0.50,12,-0.0009,False,False,4.1186,36,25.17,33.813,in_progress,0.00
+SIM_TRACE_LOG:5,23,0.9939,2.7410,-155.6216,-13.30,0.80,1,-0.0195,False,False,4.3401,37,25.17,33.873,in_progress,0.00
+SIM_TRACE_LOG:5,24,0.9399,2.7085,-153.8572,6.70,2.50,9,-0.1276,False,False,4.9589,37,25.17,33.938,in_progress,0.00
+SIM_TRACE_LOG:5,25,0.8693,2.6631,-151.7473,-13.30,1.30,2,-0.1677,False,False,9.7545,43,25.17,34.007,in_progress,0.00
+SIM_TRACE_LOG:5,26,0.7999,2.6185,-150.3588,0.00,2.00,15,0.0010,True,False,9.9823,44,25.17,34.068,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=6, Total reward=119788.7, Steps=201, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:6,1,0.9508,3.3980,166.4619,0.00,2.00,15,0.0000,False,True,0.5557,38,25.17,34.21,prepare,0.00
+SIM_TRACE_LOG:6,2,0.9512,3.3978,166.4684,0.00,2.00,15,31234.0749,False,True,0.5542,38,25.17,34.267,in_progress,0.00
+SIM_TRACE_LOG:6,3,0.9444,3.4005,166.2397,-6.70,1.70,4,10761.4420,False,True,0.5815,38,25.17,34.342,in_progress,0.00
+SIM_TRACE_LOG:6,4,0.9255,3.4037,166.5567,-6.70,1.00,3,5416.9109,False,True,0.6573,38,25.17,34.408,in_progress,0.00
+SIM_TRACE_LOG:6,5,0.8905,3.4122,166.4657,-13.30,0.80,1,2383.0879,False,True,0.7983,38,25.17,34.472,in_progress,0.00
+SIM_TRACE_LOG:6,6,0.8516,3.4242,165.8386,30.00,0.30,14,252.7020,False,True,0.9553,39,25.17,34.541,in_progress,0.00
+SIM_TRACE_LOG:6,7,0.8068,3.4364,165.7236,13.30,1.30,11,3056.6108,False,True,1.1360,39,25.17,34.611,in_progress,0.00
+SIM_TRACE_LOG:6,8,0.7602,3.4458,166.2384,0.00,4.00,6,13.4177,False,True,1.2610,39,25.17,34.676,in_progress,0.00
+SIM_TRACE_LOG:6,9,0.7042,3.4588,166.2482,6.70,1.70,8,4.3837,False,True,1.4602,39,25.17,34.742,in_progress,0.00
+SIM_TRACE_LOG:6,10,0.6299,3.4760,166.3094,6.70,1.70,8,3.9292,False,True,1.7245,40,25.17,34.805,in_progress,0.00
+SIM_TRACE_LOG:6,11,0.5429,3.4912,167.5559,0.00,4.00,6,9.4471,False,True,2.0215,40,25.17,34.868,in_progress,0.00
+SIM_TRACE_LOG:6,12,0.4537,3.5070,168.4451,-13.30,1.30,2,1.5235,False,True,2.0837,40,25.17,34.941,in_progress,0.00
+SIM_TRACE_LOG:6,13,0.3550,3.5304,167.9524,6.70,1.00,7,1.0000,False,True,2.3463,40,25.17,35.007,in_progress,0.00
+SIM_TRACE_LOG:6,14,0.2670,3.5485,168.0887,13.30,1.30,11,0.7485,False,True,2.5870,41,25.17,35.072,in_progress,0.00
+SIM_TRACE_LOG:6,15,0.1818,3.5626,168.9107,6.70,1.70,8,0.7374,False,True,2.8198,41,25.17,35.146,in_progress,0.00
+SIM_TRACE_LOG:6,16,0.0853,3.5771,169.7502,6.70,1.00,7,0.1242,False,True,2.8198,41,25.17,35.199,in_progress,0.00
+SIM_TRACE_LOG:6,17,-0.0070,3.5874,171.1310,-13.30,0.80,1,-0.0059,False,False,2.8198,41,25.17,35.268,in_progress,0.00
+SIM_TRACE_LOG:6,18,-0.0900,3.5994,171.3110,-6.70,2.50,5,-0.0593,False,False,2.8540,41,25.17,35.336,in_progress,0.00
+SIM_TRACE_LOG:6,19,-0.1834,3.6118,171.7157,13.30,1.30,11,-0.0434,False,False,3.0349,41,25.17,35.401,in_progress,0.00
+SIM_TRACE_LOG:6,20,-0.2729,3.6222,172.1957,-6.70,1.00,3,0.0010,True,False,3.2128,41,25.17,35.473,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=7, Total reward=53140.03, Steps=221, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:7,1,0.1908,2.5935,-101.3572,20.00,0.50,12,0.0000,False,True,0.5567,44,25.17,35.608,prepare,0.00
+SIM_TRACE_LOG:7,2,0.1908,2.5937,-101.3706,6.70,1.00,7,26538.9613,False,True,0.5562,44,25.17,35.668,in_progress,0.00
+SIM_TRACE_LOG:7,3,0.1890,2.5888,-101.6131,13.30,0.80,10,7403.4465,False,True,0.5766,44,25.17,35.74,in_progress,0.00
+SIM_TRACE_LOG:7,4,0.1866,2.5677,-101.1528,0.00,4.00,6,47025.1137,False,True,0.6607,45,25.17,35.78,in_progress,0.00
+SIM_TRACE_LOG:7,5,0.1828,2.5361,-100.7272,-6.70,2.50,5,16757.2787,False,True,0.7867,45,25.17,35.875,in_progress,0.00
+SIM_TRACE_LOG:7,6,0.1767,2.4923,-100.3328,-6.70,2.50,5,15320.3818,False,True,0.9622,45,25.17,35.931,in_progress,0.00
+SIM_TRACE_LOG:7,7,0.1673,2.4335,-100.0437,-6.70,2.50,5,15901.3086,False,True,1.1983,45,25.17,36.01,in_progress,0.00
+SIM_TRACE_LOG:7,8,0.1524,2.3532,-100.2074,-13.30,0.80,1,5014.0627,False,True,1.5227,46,25.17,36.08,in_progress,0.00
+SIM_TRACE_LOG:7,9,0.1346,2.2802,-101.0561,6.70,2.50,9,23237.4508,False,True,1.8212,46,25.17,36.133,in_progress,0.00
+SIM_TRACE_LOG:7,10,0.1152,2.1968,-101.7236,13.30,0.80,10,8031.8519,False,True,2.1614,46,25.17,36.193,in_progress,0.00
+SIM_TRACE_LOG:7,11,0.1013,2.1252,-101.8276,0.00,2.00,15,27867.6609,False,True,2.4510,47,25.17,36.275,in_progress,0.00
+SIM_TRACE_LOG:7,12,0.0870,2.0413,-101.1309,13.30,0.80,10,8186.9225,False,True,2.7891,47,25.17,36.336,in_progress,0.00
+SIM_TRACE_LOG:7,13,0.0775,1.9576,-99.6061,-6.70,2.50,5,27274.3008,False,True,3.1223,48,25.17,36.396,in_progress,0.00
+SIM_TRACE_LOG:7,14,0.0681,1.8672,-98.3662,30.00,0.30,14,845.9276,False,True,3.4826,48,25.17,36.474,in_progress,0.00
+SIM_TRACE_LOG:7,15,0.0654,1.7795,-95.9853,-13.30,0.80,1,5990.6589,False,True,3.8267,49,25.17,36.536,in_progress,0.00
+SIM_TRACE_LOG:7,16,0.0657,1.7173,-94.4704,6.70,2.50,9,19888.7796,False,True,4.0692,49,25.17,36.583,in_progress,0.00
+SIM_TRACE_LOG:7,17,0.0677,1.6398,-92.6695,-13.30,1.30,2,8393.6662,False,True,4.4163,49,25.17,36.676,in_progress,0.00
+SIM_TRACE_LOG:7,18,0.0689,1.5615,-91.5706,30.00,0.30,14,656.3191,False,True,4.7278,50,25.17,36.732,in_progress,0.00
+SIM_TRACE_LOG:7,19,0.0749,1.4914,-89.8061,-6.70,1.70,4,9019.7406,False,True,5.0737,50,25.17,36.807,in_progress,0.00
+SIM_TRACE_LOG:7,20,0.0853,1.4221,-87.5163,-6.70,2.50,5,15376.4406,False,True,5.3495,50,25.17,36.87,in_progress,0.00
+SIM_TRACE_LOG:7,21,0.0955,1.3341,-86.1322,-13.30,0.80,1,5063.7322,False,True,5.6961,51,25.17,36.936,in_progress,0.00
+SIM_TRACE_LOG:7,22,0.1032,1.2498,-85.4511,-20.00,0.50,0,1236.8973,False,True,6.0375,51,25.17,36.963,in_progress,0.00
+SIM_TRACE_LOG:7,23,0.1025,1.1775,-86.9238,-6.70,1.00,3,3957.1493,False,True,6.2762,52,25.17,37.07,in_progress,0.00
+SIM_TRACE_LOG:7,24,0.0999,1.1088,-88.3795,6.70,1.70,8,4472.2357,False,True,6.4994,52,25.17,37.143,in_progress,0.00
+SIM_TRACE_LOG:7,25,0.1029,1.0292,-88.2579,0.00,4.00,6,612.7250,False,True,6.6237,52,25.17,37.177,in_progress,0.00
+SIM_TRACE_LOG:7,26,0.1069,0.9361,-88.0670,-6.70,2.50,5,271.4077,False,True,6.8717,52,25.17,37.276,in_progress,0.00
+SIM_TRACE_LOG:7,27,0.1083,0.8252,-88.4649,-13.30,1.30,2,56.0400,False,True,7.1569,53,25.17,37.34,in_progress,0.00
+SIM_TRACE_LOG:7,28,0.0995,0.7246,-90.8794,6.70,2.50,9,3.3565,False,True,7.3849,53,25.17,37.405,in_progress,0.00
+SIM_TRACE_LOG:7,29,0.0883,0.6138,-92.8620,-13.30,0.80,1,0.3241,False,True,7.4162,53,25.17,37.472,in_progress,0.00
+SIM_TRACE_LOG:7,30,0.0695,0.5045,-95.8812,-6.70,2.50,5,-0.0445,False,False,7.4162,53,25.17,37.541,in_progress,0.00
+SIM_TRACE_LOG:7,31,0.0454,0.3846,-98.3246,6.70,2.50,9,-0.1798,False,False,7.4162,53,25.17,37.604,in_progress,0.00
+SIM_TRACE_LOG:7,32,0.0181,0.2556,-99.9644,13.30,1.30,11,0.0010,True,False,7.4828,53,25.17,37.673,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=8, Total reward=304403.92, Steps=253, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:8,1,0.0152,1.3522,-89.5519,6.70,2.50,9,0.0000,False,True,0.5364,51,25.17,37.804,prepare,0.00
+SIM_TRACE_LOG:8,2,0.0152,1.3525,-89.5336,6.70,1.70,8,11069.8531,False,True,0.5352,51,25.17,37.873,in_progress,0.00
+SIM_TRACE_LOG:8,3,0.0144,1.3437,-89.7963,-13.30,1.30,2,3392.8383,False,True,0.5678,51,25.17,37.937,in_progress,0.00
+SIM_TRACE_LOG:8,4,0.0149,1.3179,-89.7593,-6.70,1.00,3,2283.4763,False,True,0.6666,51,25.17,38.001,in_progress,0.00
+SIM_TRACE_LOG:8,5,0.0168,1.2835,-89.4285,-6.70,2.50,5,4966.7001,False,True,0.7996,51,25.17,38.073,in_progress,0.00
+SIM_TRACE_LOG:8,6,0.0185,1.2361,-89.1480,20.00,0.50,12,108.3215,False,True,0.8992,51,25.17,38.139,in_progress,0.00
+SIM_TRACE_LOG:8,7,0.0224,1.1833,-88.5370,6.70,1.70,8,1241.9741,False,True,1.0830,51,25.17,38.21,in_progress,0.00
+SIM_TRACE_LOG:8,8,0.0272,1.1193,-87.8663,-30.00,0.30,13,58.9325,False,True,1.3065,52,25.17,38.27,in_progress,0.00
+SIM_TRACE_LOG:8,9,0.0280,1.0530,-88.2101,-6.70,1.00,3,622.8922,False,True,1.5286,52,25.17,38.337,in_progress,0.00
+SIM_TRACE_LOG:8,10,0.0273,0.9924,-88.8222,-6.70,2.50,5,49.1174,False,True,1.6177,52,25.17,38.386,in_progress,0.00
+SIM_TRACE_LOG:8,11,0.0246,0.9095,-89.8145,6.70,2.50,9,2.0355,False,True,1.6874,52,25.17,38.435,in_progress,0.00
+SIM_TRACE_LOG:8,12,0.0249,0.8227,-89.8993,13.30,0.80,10,0.3913,False,True,1.9079,52,25.17,38.537,in_progress,0.00
+SIM_TRACE_LOG:8,13,0.0283,0.7281,-89.1815,13.30,0.80,10,2.0854,False,True,2.1580,53,25.17,38.605,in_progress,0.00
+SIM_TRACE_LOG:8,14,0.0396,0.6528,-86.8970,6.70,2.50,9,30.0037,False,True,2.3834,53,25.17,38.67,in_progress,0.00
+SIM_TRACE_LOG:8,15,0.0519,0.5730,-85.1790,0.00,4.00,6,0.2058,False,True,2.4162,53,25.17,38.728,in_progress,0.00
+SIM_TRACE_LOG:8,16,0.0679,0.4687,-83.7822,-13.30,0.80,1,-0.0088,False,False,2.4162,53,25.17,38.802,in_progress,0.00
+SIM_TRACE_LOG:8,17,0.0782,0.3687,-83.9761,-6.70,2.50,5,-0.0691,False,False,2.5150,53,25.17,38.876,in_progress,0.00
+SIM_TRACE_LOG:8,18,0.0858,0.2553,-84.8901,13.30,1.30,11,0.0010,True,False,2.7282,53,25.17,38.93,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=9, Total reward=23828.75, Steps=271, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:9,1,1.0964,0.8005,-6.8807,6.70,1.00,7,0.0000,False,True,0.5566,57,25.17,39.07,prepare,0.00
+SIM_TRACE_LOG:9,2,1.0963,0.8005,-6.8726,13.30,0.80,10,90617.8771,False,True,0.5562,57,25.17,39.132,in_progress,0.00
+SIM_TRACE_LOG:9,3,1.1033,0.8001,-6.7452,6.70,1.70,8,23635.4815,False,True,0.5842,57,25.17,39.208,in_progress,0.00
+SIM_TRACE_LOG:9,4,1.1249,0.7992,-6.3159,0.00,4.00,6,37083.6485,False,True,0.6700,57,25.17,39.275,in_progress,0.00
+SIM_TRACE_LOG:9,5,1.1577,0.7962,-6.1710,-6.70,1.70,4,13779.0495,False,True,0.8007,57,25.17,39.339,in_progress,0.00
+SIM_TRACE_LOG:9,6,1.2102,0.7894,-6.3519,6.70,1.70,8,14033.9210,False,True,1.0110,57,25.17,39.4,in_progress,0.00
+SIM_TRACE_LOG:9,7,1.2752,0.7824,-6.3710,-30.00,0.30,13,690.6989,False,True,1.2705,58,25.17,39.471,in_progress,0.00
+SIM_TRACE_LOG:9,8,1.3287,0.7733,-7.0530,6.70,1.00,7,7644.4062,False,True,1.4886,58,25.17,39.54,in_progress,0.00
+SIM_TRACE_LOG:9,9,1.3815,0.7648,-7.5664,-13.30,0.80,1,5525.0133,False,True,1.7008,58,25.17,39.601,in_progress,0.00
+SIM_TRACE_LOG:9,10,1.4404,0.7544,-8.1306,6.70,1.70,8,15276.7460,False,True,1.9385,59,25.17,39.683,in_progress,0.00
+SIM_TRACE_LOG:9,11,1.5028,0.7404,-9.3117,0.00,4.00,6,38760.8803,False,True,2.1924,59,25.17,39.742,in_progress,0.00
+SIM_TRACE_LOG:9,12,1.5770,0.7282,-9.2606,20.00,0.50,12,1781.3122,False,True,2.4916,59,25.17,39.805,in_progress,0.00
+SIM_TRACE_LOG:9,13,1.6653,0.7162,-8.6109,13.30,0.80,10,5770.9575,False,True,2.8417,60,25.17,39.873,in_progress,0.00
+SIM_TRACE_LOG:9,14,1.7212,0.7091,-8.3164,-6.70,1.70,4,10134.1010,False,True,3.0590,60,25.17,39.942,in_progress,0.00
+SIM_TRACE_LOG:9,15,1.7927,0.6972,-8.6717,-6.70,1.70,4,11584.9949,False,True,3.3436,60,25.17,39.968,in_progress,0.00
+SIM_TRACE_LOG:9,16,1.8770,0.6812,-9.3591,13.30,1.30,11,7053.2817,False,True,3.6813,61,25.17,40.07,in_progress,0.00
+SIM_TRACE_LOG:9,17,1.9645,0.6635,-10.0646,0.00,4.00,6,28023.8096,False,True,4.0318,61,25.17,40.136,in_progress,0.00
+SIM_TRACE_LOG:9,18,2.0713,0.6417,-10.6063,-20.00,0.50,0,864.2560,False,True,4.4615,62,25.17,40.173,in_progress,0.00
+SIM_TRACE_LOG:9,19,2.1661,0.6189,-11.6387,-13.30,0.80,1,4251.6878,False,True,4.8640,62,25.17,40.272,in_progress,0.00
+SIM_TRACE_LOG:9,20,2.2504,0.5945,-13.1413,-13.30,1.30,2,7186.8908,False,True,5.2128,63,25.17,40.338,in_progress,0.00
+SIM_TRACE_LOG:9,21,2.3325,0.5662,-15.1029,-20.00,0.50,0,1028.2570,False,True,5.5912,63,25.17,40.404,in_progress,0.00
+SIM_TRACE_LOG:9,22,2.4032,0.5325,-18.2940,-30.00,0.30,13,746.6390,False,True,5.8890,64,25.17,40.472,in_progress,0.00
+SIM_TRACE_LOG:9,23,2.4611,0.4984,-21.5838,-20.00,0.50,0,1218.6103,False,True,6.1371,64,25.17,40.539,in_progress,0.00
+SIM_TRACE_LOG:9,24,2.5137,0.4617,-24.8986,30.00,0.30,14,744.9583,False,True,6.3643,64,25.17,40.603,in_progress,0.00
+SIM_TRACE_LOG:9,25,2.5504,0.4330,-27.3944,-6.70,2.50,5,13640.3451,False,True,6.5214,64,25.17,40.652,in_progress,0.00
+SIM_TRACE_LOG:9,26,2.5889,0.4054,-28.9973,13.30,1.30,11,4401.4431,False,True,6.6856,65,25.17,40.74,in_progress,0.00
+SIM_TRACE_LOG:9,27,2.6403,0.3667,-31.1123,0.00,4.00,6,13128.7445,False,True,6.9051,65,25.17,40.811,in_progress,0.00
+SIM_TRACE_LOG:9,28,2.7026,0.3202,-32.8149,-6.70,2.50,5,5340.7025,False,True,7.1659,65,25.17,40.871,in_progress,0.00
+SIM_TRACE_LOG:9,29,2.7745,0.2548,-36.2953,-13.30,1.30,2,1470.2588,False,True,7.4760,66,25.17,40.939,in_progress,0.00
+SIM_TRACE_LOG:9,30,2.8456,0.1789,-40.3915,0.00,2.00,15,1691.8815,False,True,7.7866,66,25.17,41.004,in_progress,0.00
+SIM_TRACE_LOG:9,31,2.9057,0.1090,-43.4800,-13.30,1.30,2,439.5429,False,True,8.0414,66,25.17,41.075,in_progress,0.00
+SIM_TRACE_LOG:9,32,2.9718,0.0236,-46.9702,20.00,0.50,12,22.5580,False,True,8.3335,67,25.17,41.141,in_progress,0.00
+SIM_TRACE_LOG:9,33,3.0206,-0.0472,-49.8048,0.00,2.00,15,109.5769,False,True,8.5521,67,25.17,41.208,in_progress,0.00
+SIM_TRACE_LOG:9,34,3.0723,-0.1243,-52.1266,0.00,4.00,6,-0.0179,False,False,8.6227,67,25.17,41.278,in_progress,0.00
+SIM_TRACE_LOG:9,35,3.1315,-0.2202,-54.8156,-6.70,2.50,5,-0.1421,False,False,8.8542,67,25.17,41.342,in_progress,0.00
+SIM_TRACE_LOG:9,36,3.1854,-0.3261,-58.3594,0.00,4.00,6,-0.4711,False,False,9.0734,68,25.17,41.393,in_progress,0.00
+SIM_TRACE_LOG:9,37,3.2435,-0.4511,-61.6788,-6.70,1.00,3,0.0010,True,False,9.3098,68,25.17,41.463,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=10, Total reward=367681.9, Steps=308, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:10,1,2.3127,0.4963,-15.8221,13.30,0.80,10,0.0000,False,True,0.5557,63,25.17,41.622,prepare,0.00
+SIM_TRACE_LOG:10,2,2.3127,0.4966,-15.7722,6.70,2.50,9,47200.4896,False,True,0.5553,63,25.17,41.67,in_progress,0.00
+SIM_TRACE_LOG:10,3,2.3201,0.4922,-16.3693,-13.30,0.80,1,5533.6321,False,True,0.5873,63,25.17,41.743,in_progress,0.00
+SIM_TRACE_LOG:10,4,2.3408,0.4867,-16.2962,-20.00,0.50,0,794.9264,False,True,0.6719,63,25.17,41.805,in_progress,0.00
+SIM_TRACE_LOG:10,5,2.3744,0.4752,-16.6612,13.30,0.80,10,3110.6948,False,True,0.8105,63,25.17,41.862,in_progress,0.00
+SIM_TRACE_LOG:10,6,2.4137,0.4584,-17.7947,-6.70,1.00,3,4008.3909,False,True,0.9750,64,25.17,41.95,in_progress,0.00
+SIM_TRACE_LOG:10,7,2.4560,0.4406,-18.7360,6.70,1.70,8,4936.9687,False,True,1.1521,64,25.17,41.995,in_progress,0.00
+SIM_TRACE_LOG:10,8,2.5111,0.4195,-19.2241,-13.30,0.80,1,1712.4492,False,True,1.3723,64,25.17,42.067,in_progress,0.00
+SIM_TRACE_LOG:10,9,2.5677,0.3952,-20.1541,-13.30,1.30,2,2560.2815,False,True,1.6060,64,25.17,42.103,in_progress,0.00
+SIM_TRACE_LOG:10,10,2.6243,0.3686,-21.4356,-13.30,0.80,1,1415.2821,False,True,1.8412,65,25.17,42.205,in_progress,0.00
+SIM_TRACE_LOG:10,11,2.6862,0.3375,-22.8743,0.00,4.00,6,8224.2883,False,True,2.0945,65,25.17,42.247,in_progress,0.00
+SIM_TRACE_LOG:10,12,2.7540,0.3009,-24.5190,-6.70,1.70,4,2748.3625,False,True,2.3767,65,25.17,42.338,in_progress,0.00
+SIM_TRACE_LOG:10,13,2.8368,0.2499,-27.0357,-13.30,1.30,2,1445.2801,False,True,2.7240,66,25.17,42.405,in_progress,0.00
+SIM_TRACE_LOG:10,14,2.9059,0.2011,-29.6936,0.00,4.00,6,4480.3240,False,True,3.0090,66,25.17,42.475,in_progress,0.00
+SIM_TRACE_LOG:10,15,2.9861,0.1383,-32.9539,-20.00,0.50,0,98.0045,False,True,3.3490,67,25.17,42.542,in_progress,0.00
+SIM_TRACE_LOG:10,16,3.0652,0.0654,-37.4349,13.30,0.80,10,192.2783,False,True,3.6227,67,25.17,42.604,in_progress,0.00
+SIM_TRACE_LOG:10,17,3.1256,0.0030,-40.2182,6.70,1.70,8,233.9518,False,True,3.8209,67,25.17,42.668,in_progress,0.00
+SIM_TRACE_LOG:10,18,3.1831,-0.0558,-41.9409,20.00,0.50,12,7.7597,False,True,4.0520,68,25.17,42.739,in_progress,0.00
+SIM_TRACE_LOG:10,19,3.2411,-0.1172,-43.5289,6.70,1.00,7,0.1005,False,False,4.2852,68,25.17,42.796,in_progress,0.00
+SIM_TRACE_LOG:10,20,3.2926,-0.1742,-44.8046,20.00,0.50,12,-0.0034,False,False,4.4224,68,25.17,42.874,in_progress,0.00
+SIM_TRACE_LOG:10,21,3.3392,-0.2190,-44.5946,-6.70,1.00,3,-0.0395,False,False,4.4224,68,25.17,42.931,in_progress,0.00
+SIM_TRACE_LOG:10,22,3.3922,-0.2713,-44.5697,-6.70,1.70,4,-0.0940,False,False,4.4721,68,25.17,43.006,in_progress,0.00
+SIM_TRACE_LOG:10,23,3.4363,-0.3183,-45.1547,30.00,0.30,14,-0.0058,False,False,4.6190,68,25.17,43.068,in_progress,0.00
+SIM_TRACE_LOG:10,24,3.4889,-0.3687,-44.7537,-6.70,1.00,3,0.0010,True,False,4.7977,68,25.17,43.146,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=11, Total reward=88703.32, Steps=332, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:11,1,3.5646,0.4533,8.1330,-6.70,1.00,3,0.0000,False,True,0.5541,69,25.17,43.263,prepare,0.00
+SIM_TRACE_LOG:11,2,3.5643,0.4533,8.1347,-13.30,1.30,2,16142.1778,False,True,0.5531,69,25.17,43.342,in_progress,0.00
+SIM_TRACE_LOG:11,3,3.5738,0.4551,8.2508,-6.70,1.00,3,7429.0609,False,True,0.5913,69,25.17,43.406,in_progress,0.00
+SIM_TRACE_LOG:11,4,3.5974,0.4586,8.2021,-30.00,0.30,13,438.8020,False,True,0.6852,70,25.17,43.467,in_progress,0.00
+SIM_TRACE_LOG:11,5,3.6216,0.4601,7.7617,30.00,0.30,14,333.4275,False,True,0.7792,70,25.17,43.533,in_progress,0.00
+SIM_TRACE_LOG:11,6,3.6425,0.4609,7.2568,0.00,4.00,6,14056.4536,False,True,0.8601,70,25.17,43.56,in_progress,0.00
+SIM_TRACE_LOG:11,7,3.6704,0.4647,7.3081,-6.70,2.50,5,7043.9268,False,True,0.9708,70,25.17,43.676,in_progress,0.00
+SIM_TRACE_LOG:11,8,3.7172,0.4665,6.3367,-6.70,1.70,4,3035.1929,False,True,1.1355,70,25.17,43.736,in_progress,0.00
+SIM_TRACE_LOG:11,9,3.7780,0.4664,4.7250,-30.00,0.30,13,134.3621,False,True,1.3603,70,25.17,43.805,in_progress,0.00
+SIM_TRACE_LOG:11,10,3.8315,0.4604,2.2927,-6.70,1.00,3,1327.7091,False,True,1.5495,71,25.17,43.871,in_progress,0.00
+SIM_TRACE_LOG:11,11,3.8933,0.4507,-0.4830,-20.00,0.50,0,149.4277,False,True,1.7643,71,25.17,43.933,in_progress,0.00
+SIM_TRACE_LOG:11,12,3.9378,0.4398,-2.9704,13.30,1.30,11,1494.5720,False,True,2.0215,71,25.17,44.005,in_progress,0.00
+SIM_TRACE_LOG:11,13,3.9859,0.4269,-5.3636,6.70,1.70,8,1973.5142,False,True,2.2000,71,25.17,44.064,in_progress,0.00
+SIM_TRACE_LOG:11,14,4.0528,0.4086,-8.0926,-6.70,1.00,3,974.1487,False,True,2.4477,72,25.17,44.144,in_progress,0.00
+SIM_TRACE_LOG:11,15,4.1132,0.3899,-10.3429,6.70,1.70,8,2858.0752,False,True,2.8748,72,25.17,44.208,in_progress,0.00
+SIM_TRACE_LOG:11,16,4.1856,0.3659,-12.7080,-20.00,0.50,0,224.1063,False,True,3.1667,73,25.17,44.267,in_progress,0.00
+SIM_TRACE_LOG:11,17,4.2657,0.3376,-14.9159,-13.30,1.30,2,1967.4003,False,True,3.7089,73,25.17,44.342,in_progress,0.00
+SIM_TRACE_LOG:11,18,4.3321,0.3063,-17.8873,-6.70,2.50,5,4389.1580,False,True,3.9961,74,25.17,44.407,in_progress,0.00
+SIM_TRACE_LOG:11,19,4.4140,0.2678,-20.3615,30.00,0.30,14,169.1914,False,True,4.5720,74,25.17,44.474,in_progress,0.00
+SIM_TRACE_LOG:11,20,4.4965,0.2318,-21.8975,30.00,0.30,14,183.1933,False,True,4.9290,75,25.17,44.532,in_progress,0.00
+SIM_TRACE_LOG:11,21,4.5687,0.2072,-20.9831,13.30,0.80,10,1591.9980,False,True,5.2365,75,25.17,44.606,in_progress,0.00
+SIM_TRACE_LOG:11,22,4.6386,0.1886,-19.2201,-13.30,1.30,2,2834.3390,False,True,5.5172,76,25.17,44.669,in_progress,0.00
+SIM_TRACE_LOG:11,23,4.7065,0.1717,-17.8283,-6.70,1.70,4,4865.2870,False,True,5.7874,76,25.17,44.742,in_progress,0.00
+SIM_TRACE_LOG:11,24,4.7846,0.1515,-16.8386,6.70,1.70,8,4983.0771,False,True,5.9695,76,25.17,44.808,in_progress,0.00
+SIM_TRACE_LOG:11,25,4.8725,0.1336,-15.0017,13.30,1.30,11,3462.9455,False,True,6.3236,77,25.17,44.874,in_progress,0.00
+SIM_TRACE_LOG:11,26,4.9651,0.1230,-12.0622,20.00,0.50,12,493.4594,False,True,6.6221,77,25.17,44.938,in_progress,0.00
+SIM_TRACE_LOG:11,27,5.0485,0.1233,-8.0535,6.70,1.00,7,3843.5685,False,True,6.9056,77,25.17,45.005,in_progress,0.00
+SIM_TRACE_LOG:11,28,5.1209,0.1308,-4.1142,-20.00,0.50,0,594.1151,False,True,7.1845,78,25.17,45.049,in_progress,0.00
+SIM_TRACE_LOG:11,29,5.1874,0.1381,-1.3441,0.00,4.00,6,20883.0889,False,True,7.4228,78,25.17,45.137,in_progress,0.00
+SIM_TRACE_LOG:11,30,5.2621,0.1419,-0.2081,6.70,2.50,9,11295.5390,False,True,7.5798,78,25.17,45.206,in_progress,0.00
+SIM_TRACE_LOG:11,31,5.3464,0.1535,2.3122,6.70,1.70,8,7825.8355,False,True,7.9178,79,25.17,45.271,in_progress,0.00
+SIM_TRACE_LOG:11,32,5.4429,0.1743,5.8957,-6.70,1.00,3,2949.3129,False,True,8.2178,79,25.17,45.336,in_progress,0.00
+SIM_TRACE_LOG:11,33,5.5366,0.1964,8.6449,-30.00,0.30,13,245.0365,False,True,8.5367,79,25.17,45.4,in_progress,0.00
+SIM_TRACE_LOG:11,34,5.6173,0.2124,9.4017,13.30,0.80,10,1836.5172,False,True,8.8539,80,25.17,45.477,in_progress,0.00
+SIM_TRACE_LOG:11,35,5.6944,0.2256,9.4940,0.00,4.00,6,7595.8231,False,True,9.0247,80,25.17,45.54,in_progress,0.00
+SIM_TRACE_LOG:11,36,5.7814,0.2395,9.2489,-13.30,1.30,2,1522.9609,False,True,9.3393,80,25.17,45.586,in_progress,0.00
+SIM_TRACE_LOG:11,37,5.8756,0.2495,8.1253,-13.30,0.80,1,711.7771,False,True,9.6686,81,25.17,45.676,in_progress,0.00
+SIM_TRACE_LOG:11,38,5.9562,0.2551,6.7814,6.70,2.50,9,1235.6003,False,True,9.8173,81,25.17,45.732,in_progress,0.00
+SIM_TRACE_LOG:11,39,6.0520,0.2581,5.0057,-6.70,1.70,4,477.6784,False,True,10.0616,81,25.17,45.801,in_progress,0.00
+SIM_TRACE_LOG:11,40,6.1569,0.2603,3.4947,6.70,1.00,7,125.5590,False,True,10.3737,82,25.17,45.87,in_progress,0.00
+SIM_TRACE_LOG:11,41,6.2511,0.2598,2.1400,0.00,4.00,6,2.4410,False,False,10.6178,82,25.17,45.937,in_progress,0.00
+SIM_TRACE_LOG:11,42,6.3651,0.2606,1.4990,-30.00,0.30,13,-0.0955,False,False,10.6842,82,25.17,46.008,in_progress,0.00
+SIM_TRACE_LOG:11,43,6.4663,0.2564,-0.1264,-6.70,1.00,3,-0.0791,False,False,10.9303,82,25.17,46.077,in_progress,0.00
+SIM_TRACE_LOG:11,44,6.5674,0.2441,-2.7732,6.70,1.70,8,0.0010,True,False,12.5908,84,25.17,46.138,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=12, Total reward=143699.69, Steps=376, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:12,1,4.7553,0.3928,-26.8923,-13.30,1.30,2,0.0000,False,True,0.5568,76,25.17,46.266,prepare,0.00
+SIM_TRACE_LOG:12,2,4.7552,0.3929,-26.8824,20.00,0.50,12,3398.1393,False,True,0.5561,76,25.17,46.337,in_progress,0.00
+SIM_TRACE_LOG:12,3,4.7641,0.3875,-27.1289,20.00,0.50,12,2137.8064,False,True,0.5973,76,25.17,46.405,in_progress,0.00
+SIM_TRACE_LOG:12,4,4.7848,0.3785,-26.7101,-6.70,1.00,3,8486.9529,False,True,0.6868,76,25.17,46.453,in_progress,0.00
+SIM_TRACE_LOG:12,5,4.8142,0.3631,-26.8800,13.30,0.80,10,5270.1390,False,True,0.8188,76,25.17,46.535,in_progress,0.00
+SIM_TRACE_LOG:12,6,4.8526,0.3448,-26.6373,6.70,1.70,8,11554.1107,False,True,0.9875,76,25.17,46.601,in_progress,0.00
+SIM_TRACE_LOG:12,7,4.8989,0.3216,-26.6645,6.70,1.70,8,9581.7746,False,True,1.1909,76,25.17,46.66,in_progress,0.00
+SIM_TRACE_LOG:12,8,4.9689,0.2881,-26.3583,-6.70,1.00,3,5685.7823,False,True,1.4966,77,25.17,46.741,in_progress,0.00
+SIM_TRACE_LOG:12,9,5.0272,0.2589,-26.4155,6.70,1.00,7,3357.5237,False,True,1.7328,77,25.17,46.801,in_progress,0.00
+SIM_TRACE_LOG:12,10,5.0959,0.2249,-26.3617,13.30,1.30,11,3301.7451,False,True,2.0242,78,25.17,46.868,in_progress,0.00
+SIM_TRACE_LOG:12,11,5.1655,0.1989,-24.6746,13.30,0.80,10,2078.7809,False,True,2.3142,78,25.17,46.936,in_progress,0.00
+SIM_TRACE_LOG:12,12,5.2370,0.1777,-22.2952,6.70,2.50,9,3766.8632,False,True,2.5014,78,25.17,47.006,in_progress,0.00
+SIM_TRACE_LOG:12,13,5.3086,0.1589,-20.1307,0.00,4.00,6,6559.9306,False,True,2.7723,78,25.17,47.073,in_progress,0.00
+SIM_TRACE_LOG:12,14,5.4036,0.1375,-17.4356,6.70,2.50,9,3793.6142,False,True,3.1340,79,25.17,47.138,in_progress,0.00
+SIM_TRACE_LOG:12,15,5.5031,0.1203,-14.5275,0.00,4.00,6,2188.0174,False,True,3.2876,79,25.17,47.205,in_progress,0.00
+SIM_TRACE_LOG:12,16,5.6329,0.1036,-11.2753,-6.70,1.00,3,504.6820,False,True,3.7267,80,25.17,47.275,in_progress,0.00
+SIM_TRACE_LOG:12,17,5.7509,0.0828,-10.3288,20.00,0.50,12,16.4637,False,True,4.0171,80,25.17,47.338,in_progress,0.00
+SIM_TRACE_LOG:12,18,5.8523,0.0697,-9.2399,-6.70,1.70,4,143.4462,False,True,4.1833,80,25.17,47.404,in_progress,0.00
+SIM_TRACE_LOG:12,19,5.9561,0.0619,-7.3864,-13.30,0.80,1,34.0206,False,True,4.5036,81,25.17,47.476,in_progress,0.00
+SIM_TRACE_LOG:12,20,6.0533,0.0495,-7.2985,13.30,1.30,11,-0.5832,False,False,4.7917,81,25.17,47.542,in_progress,0.00
+SIM_TRACE_LOG:12,21,6.1428,0.0380,-7.3377,30.00,0.30,14,-0.0027,False,False,4.8173,81,25.17,47.605,in_progress,0.00
+SIM_TRACE_LOG:12,22,6.2223,0.0334,-6.1164,6.70,2.50,9,-3.1429,False,False,4.9528,81,25.17,47.667,in_progress,0.00
+SIM_TRACE_LOG:12,23,6.3103,0.0301,-4.8236,30.00,0.30,14,-0.3197,False,False,5.2007,81,25.17,47.739,in_progress,0.00
+SIM_TRACE_LOG:12,24,6.3935,0.0404,-0.8489,13.30,0.80,10,0.0010,True,False,5.4713,82,25.17,47.805,off_track,0.00
+[s3] Successfully uploaded metrics to                  s3 bucket aws-deepracer-data-us-east-1-1 with s3 key data-1bc58067-ceed-4907-bc9b-2deb43b84d4f/models/2c51304f-ee0f-41c5-b169-c992d8c40aff/metrics/training/training-20220510070335-0YjmNcuVQQWtloTSuYs73A.json.
+Training> Name=main_level/agent, Worker=0, Episode=13, Total reward=71855.75, Steps=400, Training iteration=0
+Reset agent
+Reset agent finished
+SIM_TRACE_LOG:13,1,5.8865,0.6211,42.7481,13.30,1.30,11,0.0000,False,True,0.5575,82,25.17,47.939,prepare,0.00
+{"simapp_exception": {"date": "2022-05-10 07:10:42.123282", "function": "deepracer_exceptions.py::log_except_and_exit::30", "message": "Reward function error: Reward score out of range. Reward: 135046.97489315167, range: [-1e5, 1e5]", "exceptionType": "simulation_worker.exceptions", "eventType": "user_error", "errorCode": "400"}}
+ERROR: FAULT_CODE: 41
+simapp_exit_gracefully: simapp_exit--1
+Terminating simapp simulation...
+simapp_exit_gracefully - callstack trace=Traceback (callstack)
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/rollout_worker.py", line 509, in <module>
+    main()
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/rollout_worker.py", line 503, in main
+    unpause_physics=unpause_physics
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/rollout_worker.py", line 176, in rollout_worker
+    graph_manager.act(act_steps, wait_for_full_episodes=graph_manager.agent_params.algorithm.act_for_full_episodes)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/multi_agent_coach/multi_agent_graph_manager.py", line 430, in act
+    done = self.top_level_manager.step(None)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/multi_agent_coach/multi_agent_level_manager.py", line 231, in step
+    for action_info in action_infos])
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/multi_agent_coach/multi_agent_environment.py", line 185, in step
+    self._update_state()
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/environments/deepracer_racetrack_env.py", line 182, in _update_state
+    err.log_except_and_exit()
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/log_handler/deepracer_exceptions.py", line 30, in log_except_and_exit
+    SIMAPP_EVENT_ERROR_CODE_400)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/log_handler/exception_handler.py", line 74, in log_and_exit
+    s3_crash_status_file_name=s3_crash_status_file_name)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/log_handler/exception_handler.py", line 179, in simapp_exit_gracefully
+    callstack_trace = ''.join(traceback.format_stack())
+simapp_exit_gracefully - exception trace=Traceback (most recent call last):
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/environments/deepracer_racetrack_env.py", line 156, in _update_state
+    next_state, reward, done = agent.judge_action(action, self._agents_info_map)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/agents/agent.py", line 96, in judge_action
+    reward, done, _ = self._ctrl_.judge_action(agents_info_map)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/agent_ctrl/rollout_agent_ctrl.py", line 679, in judge_action
+    reward = self._judge_action_at_run_phase(episode_status=episode_status, pause=pause)
+  File "/opt/amazon/install/sagemaker_rl_agent/lib/python3.6/site-packages/markov/agent_ctrl/rollout_agent_ctrl.py", line 778, in _judge_action_at_run_phase
+    raise RewardFunctionError('Reward score out of range. Reward: {}, range: [-1e5, 1e5]'.format(reward))
+markov.log_handler.deepracer_exceptions.RewardFunctionError: Reward score out of range. Reward: 135046.97489315167, range: [-1e5, 1e5]
+simapp_exit_gracefully - skipping s3 upload.
+simapp_exit_gracefully - Job type is SageOnly. Killing SimApp and Training jobs by PID
+simapp_exit_gracefully - SimApp pids=[138, 207, 223, 223], Training pids=[59].
